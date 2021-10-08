@@ -55,7 +55,7 @@ def Write(update, context):
 
 
 if __name__ == '__main__':
-    updater = Updater(token='2082442589:AAGlx-gPI-aCKMyJR-tkNjAQtwGOtc4e8So', use_context=True)
+    updater = Updater(token='ZTOKEN', use_context=True)
 
     dp = updater.dispatcher
 
