@@ -1,5 +1,6 @@
-from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
+import os
 import json
+from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
 
 STARTED = 0
 READING = 0
@@ -54,8 +55,8 @@ def Write(update, context):
 
 
 
-if __name__ == '__main__':
-    updater = Updater(token='ZTOKEN', use_context=True)
+if __name__ == '__main__':}
+    updater = Updater(token=os.environ['ZTOKEN'], use_context=True)
 
     dp = updater.dispatcher
 
