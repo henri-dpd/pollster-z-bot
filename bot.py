@@ -1,6 +1,7 @@
 import os
 import json
 from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
+from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 
 STARTED = 0
 READING = 0
@@ -11,6 +12,10 @@ def start(update, context):
     SendHelp(update, context)
     return STARTED
 
+def started(update, context):
+    update.message.reply_text("Bot ya iniciado")
+    return STARTED
+
 def SendHelp(update, context):
     update.message.reply_text("Ayuda de PollsterZBot \n\n Comandos disponibles: \n /help \n /read \n /write")
 
@@ -18,10 +23,13 @@ def Read(update, context):
     update.message.reply_text("Estoy leyendo")
     return READING
 
+def Read(update, context):
+    update.message.reply_text("Dejo de leer")
+    return NOREADING
+
 def inputText(update, context):
     if(update.message.text == '/stop_read'):
-        update.message.reply_text("Dejo de leer")
-        return NOREADING
+        print("entre a input text")
     else:
         with open('data.json', 'r+') as file:
             data = json.load(file)
@@ -55,6 +63,7 @@ def Write(update, context):
 
 
 
+
 if __name__ == '__main__':
     updater = Updater(token=os.environ['ZTOKEN'], use_context=True)
 
@@ -65,7 +74,7 @@ if __name__ == '__main__':
             CommandHandler('start', start)
         ],
         states={
-            STARTED: []
+            STARTED: [MessageHandler(Filters.text, started)]
         },
         fallbacks=[]
     ))
@@ -74,7 +83,8 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[         
-            CommandHandler('read', Read)
+            CommandHandler('read', Read),
+            CommandHandler('stop_read', StopRead)
         ],
         states={
             READING: [MessageHandler(Filters.text, inputText)],
