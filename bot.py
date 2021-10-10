@@ -3,35 +3,101 @@ import json
 from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 
+
 STARTED = 0
 READING = 0
-NOREADING = 1
+NOTREADING = 1
+TAKEPULLTEXT = 0
+TAKEOPTIONS = 0 
+ENDCREATEPULL = 0
 
 def start(update, context):
     update.message.reply_text("Hola soy un bot en desarrollo.")
     SendHelp(update, context)
     return STARTED
 
-
 def SendHelp(update, context):
-    update.message.reply_text("Ayuda de PollsterZBot \n\n Comandos disponibles: \n /help \n /read \n /write")
+    update.message.reply_text("Ayuda de PollsterZBot \n\n Comandos disponibles: \n /help \n /read \n /stop_read \n /write \n /create_pull")
+
+def CreatePull(update, context):    
+    update.message.reply_text("Creemos Pull, primero enviame el enunciado")
+    with open('data.json', 'r+') as file:
+            data = json.load(file)
+            users = data["users"]
+            if not(update.message.chat["first_name"] in users) or not("pulls" in users[update.message.chat["first_name"]]):
+                users[update.message.chat["first_name"]] = {"pulls":[]}
+            users[update.message.chat["first_name"]]["pulls"][0].append({"text":"", "options":[]})
+            file.seek(0)
+            json.dump(data, file, indent=4)
+            file.truncate()
+    return TAKEPULLTEXT
+
+def TakePullText(update, context):    
+    update.message.reply_text("Texto de la pull: " + update.message.text)
+    with open('data.json', 'r+') as file:
+            data = json.load(file)
+            users = data["users"]
+            users[update.message.chat["first_name"]]["pulls"][0]["text"] = update.message.text
+            file.seek(0)
+            json.dump(data, file, indent=4)
+            file.truncate()
+    return TAKEOPTIONS
+
+def TakeOptions(update, context):    
+    if(update.message.text == "/finish")
+        update.message.reply_text("Pull terminada")
+        SendPull(update, context)
+        return ENDCREATEPULL
+    update.message.reply_text("Creemos Pull, primero enviame el enunciado")
+    with open('data.json', 'r+') as file:
+            data = json.load(file)
+            users = data["users"]
+            users[update.message.chat["first_name"]]["pulls"][0]["options"].append({"text":update.message.text, "votes":0})
+            file.seek(0)
+            json.dump(data, file, indent=4)
+            file.truncate()
+    return TAKEOPTIONS
+
+
+def SendPull(update, context):   
+    with open('data.json', 'r+') as file:
+        data = json.load(file)
+        users = data["users"]
+        myUser = users[update.message.chat["first_name"]]
+        myPull = myUser["pulls"][0]
+        
+        buttons = []
+        for options in myPull["options"]:
+            buttons.append([InlineKeyboardButton(
+                text = options["text"]
+                url = "google.es"
+            )])
+        
+        update.message.reply_text(
+            text = myPull["text"],
+            reply_markup = InlineKeyboardMarkup(buttons)
+        )        
+        file.seek(0)
+        json.dump(data, file, indent=4)
+        file.truncate()
+    return ENDCREATEPULL
 
 def Read(update, context):
     update.message.reply_text("Estoy leyendo")
     return READING
 
-def StopRead(update, context):
-    update.message.reply_text("Dejo de leer")
-    return NOREADING
-
 def inputText(update, context):
     if(update.message.text == '/stop_read'):
-        print("entre a input text")
+        update.message.reply_text("Dejo de leer")
+        return NOTREADING
+    if(update.message.text == '/create_pull'):
+        CreatePull(update, context)
+        return NOTREADING
     else:
         with open('data.json', 'r+') as file:
             data = json.load(file)
             users = data["users"]
-            if not(update.message.chat["first_name"] in users):
+            if not(update.message.chat["first_name"] in users) or not("messages" in users[update.message.chat["first_name"]]):
                 users[update.message.chat["first_name"]] = {"messages":[]}
             users[update.message.chat["first_name"]]["messages"].append(update.message.text)
             file.seek(0)
@@ -48,7 +114,7 @@ def Write(update, context):
     with open('data.json', 'r+') as file:
         data = json.load(file)
         users = data["users"]
-        if not(update.message.chat["first_name"] in users):
+        if not(update.message.chat["first_name"] in users) or not("messages" in users[update.message.chat["first_name"]]):
             users[update.message.chat["first_name"]] = {"messages":[]}
         myUser = users[update.message.chat["first_name"]]
         messages = ''.join(map(str,myUser["messages"]))
@@ -57,7 +123,6 @@ def Write(update, context):
         file.seek(0)
         json.dump(data, file, indent=4)
         file.truncate()
-
 
 
 
@@ -80,12 +145,22 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[         
-            CommandHandler('read', Read),
-            CommandHandler('stop_read', StopRead)
+            CommandHandler('create_pull', CreatePull) ],
+        states={
+            TAKEPULLTEXT: [MessageHandler(Filters.text, TakePullText)],
+            TAKEOPTIONS: [MessageHandler(Filters.text, TakeOptions)],
+            ENDCREATEPULL:[]
+        },
+        fallbacks=[]
+    ))
+
+    dp.add_handler(ConversationHandler(
+        entry_points=[         
+            CommandHandler('read', Read)
         ],
         states={
             READING: [MessageHandler(Filters.text, inputText)],
-            NOREADING: [MessageHandler(Filters.text, Waiting)]
+            NOTREADING: [MessageHandler(Filters.text, Waiting)]
         },
         fallbacks=[]
     ))
