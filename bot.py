@@ -9,7 +9,7 @@ READING = 0
 NOTREADING = 1
 TAKEPULLTEXT = 0
 TAKEOPTIONS = 0 
-ENDCREATEPULL = 0
+ENDCREATEPULL = 1
 
 def start(update, context):
     update.message.reply_text("Hola soy un bot en desarrollo.")
@@ -109,6 +109,9 @@ def Waiting(update, context):
     if(update.message.text == '/read'):
         update.message.reply_text("Comienzo a leer")
         return READING
+    if(update.message.text == '/create_pull'):
+        CreatePull(update, context)
+        return NOTREADING
 
 def Write(update, context):
     with open('data.json', 'r+') as file:
@@ -145,7 +148,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[         
-            CommandHandler('create_pull', CreatePull) ],
+            CommandHandler('create_pull', CreatePull)],
         states={
             TAKEPULLTEXT: [MessageHandler(Filters.text, TakePullText)],
             TAKEOPTIONS: [MessageHandler(Filters.text, TakeOptions)],
