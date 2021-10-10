@@ -20,7 +20,7 @@ def SendHelp(update, context):
     update.message.reply_text("Ayuda de PollsterZBot \n\n Comandos disponibles: \n /help \n /read \n /stop_read \n /write \n /create_pull")
 
 def CreatePull(update, context):    
-    update.message.reply_text("Creemos Pull, primero enviame el enunciado")
+    update.message.reply_text("Creemos Pull, primero enviame el enunciado, luego empieza a enviar opciones y para terminar el comando /finish")
     with open('data.json', 'r+') as file:
             data = json.load(file)
             users = data["users"]
@@ -44,7 +44,7 @@ def TakePullText(update, context):
     return TAKEOPTIONS
 
 def TakeOptions(update, context):    
-    if(update.message.text == "/finish")
+    if(update.message.text == "/finish"):
         update.message.reply_text("Pull terminada")
         SendPull(update, context)
         return ENDCREATEPULL
