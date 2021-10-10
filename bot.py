@@ -26,7 +26,7 @@ def CreatePull(update, context):
             users = data["users"]
             if not(update.message.chat["first_name"] in users) or not("pulls" in users[update.message.chat["first_name"]]):
                 users[update.message.chat["first_name"]] = {"pulls":[]}
-            users[update.message.chat["first_name"]]["pulls"][0].append({"text":"", "options":[]})
+            users[update.message.chat["first_name"]]["pulls"].append({"text":"", "options":[]})
             file.seek(0)
             json.dump(data, file, indent=4)
             file.truncate()
