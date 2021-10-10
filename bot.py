@@ -14,7 +14,6 @@ def start(update, context):
 
 def started(update, context):
     update.message.reply_text("Bot ya iniciado")
-    return STARTED
 
 def SendHelp(update, context):
     update.message.reply_text("Ayuda de PollsterZBot \n\n Comandos disponibles: \n /help \n /read \n /write")
