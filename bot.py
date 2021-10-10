@@ -23,7 +23,7 @@ def Read(update, context):
     update.message.reply_text("Estoy leyendo")
     return READING
 
-def Read(update, context):
+def StopRead(update, context):
     update.message.reply_text("Dejo de leer")
     return NOREADING
 
