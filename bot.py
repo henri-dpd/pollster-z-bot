@@ -12,8 +12,6 @@ def start(update, context):
     SendHelp(update, context)
     return STARTED
 
-def started(update, context):
-    update.message.reply_text("Bot ya iniciado")
 
 def SendHelp(update, context):
     update.message.reply_text("Ayuda de PollsterZBot \n\n Comandos disponibles: \n /help \n /read \n /write")
@@ -73,7 +71,7 @@ if __name__ == '__main__':
             CommandHandler('start', start)
         ],
         states={
-            STARTED: [MessageHandler(Filters.text, started)]
+            STARTED: []
         },
         fallbacks=[]
     ))
