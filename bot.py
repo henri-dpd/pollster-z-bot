@@ -69,7 +69,7 @@ def SendPull(update, context):
         buttons = []
         for options in myPull["options"]:
             buttons.append([InlineKeyboardButton(
-                text = options["text"]
+                text = options["text"],
                 url = "google.es"
             )])
         
