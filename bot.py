@@ -130,7 +130,7 @@ def Write(update, context):
 
 
 if __name__ == '__main__':
-    updater = Updater(token=os.environ['ZTOKEN'], use_context=True)
+    updater = Updater(token='2082442589:AAG3cwyJd2aBoyOBC46nEdkedPnYh9PeNTk', use_context=True)
 
     dp = updater.dispatcher
 
