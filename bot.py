@@ -1,6 +1,6 @@
 import os
 import json
-from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, ConversationHandler, CallbackQueryHandler, MessageHandler, Filters
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 
 
@@ -10,16 +10,29 @@ NOTREADING = 1
 TAKEPULLTEXT = 0
 TAKEOPTIONS = 0 
 ENDCREATEPULL = 1
+HELP = 0
+WRITE = 0
 
 def start(update, context):
     update.message.reply_text("Hola soy un bot en desarrollo.")
-    SendHelp(update, context)
+    Show_Buttons(update, context)
     return STARTED
 
-def SendHelp(update, context):
-    update.message.reply_text("Ayuda de PollsterZBot \n\n Comandos disponibles: \n /help \n /read \n /stop_read \n /write \n /create_pull")
+def Show_Buttons(update, context):
+    update.message.reply_text(text = "Botones Disponibles del PollsterZBot",
+                              reply_markup = InlineKeyboardMarkup([
+                                  [InlineKeyboardButton(text = "Read", callback_data = "Read")],
+                                  [InlineKeyboardButton(text = "Stop Read", callback_data = "Stop Read")],
+                                  [InlineKeyboardButton(text = "Write", callback_data = "Write")],
+                                  [InlineKeyboardButton(text = "Create Pull", callback_data = "Create Pull")]
+                                  ]))
 
-def CreatePull(update, context):    
+def SendHelp(update, context):
+    update.message.reply_text(text = "Los botones son los siguientes")
+    Show_Buttons(update, context)
+
+def CreatePull(update, context):
+    update.callback_query.answer()
     update.message.reply_text("Creemos Pull, primero enviame el enunciado, luego empieza a enviar opciones y para terminar el comando /finish")
     with open('data.json', 'r+') as file:
             data = json.load(file)
@@ -130,7 +143,7 @@ def Write(update, context):
 
 
 if __name__ == '__main__':
-    updater = Updater(token=os.environ['ZTOKEN'], use_context=True)
+    updater = Updater(token='2082442589:AAG3cwyJd2aBoyOBC46nEdkedPnYh9PeNTk', use_context=True)
 
     dp = updater.dispatcher
 
@@ -143,12 +156,31 @@ if __name__ == '__main__':
         },
         fallbacks=[]
     ))
-    dp.add_handler(CommandHandler('help', SendHelp))
-    dp.add_handler(CommandHandler('write', Write))
+
+    dp.add_handler(ConversationHandler(
+        entry_points=[
+            CommandHandler('help', SendHelp)
+        ],
+        states={
+            HELP: []
+        },
+        fallbacks=[]
+    ))
+
+    dp.add_handler(ConversationHandler(
+        entry_points=[
+            CallbackQueryHandler(pattern = "Write", callback = Write)
+        ],
+        states={
+            WRITE: []
+        },
+        fallbacks=[]
+    ))
 
     dp.add_handler(ConversationHandler(
         entry_points=[         
-            CommandHandler('create_pull', CreatePull)],
+            CallbackQueryHandler(pattern = "Create Pull", callback=CreatePull)
+        ],
         states={
             TAKEPULLTEXT: [MessageHandler(Filters.text, TakePullText)],
             TAKEOPTIONS: [MessageHandler(Filters.text, TakeOptions)],
@@ -159,7 +191,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[         
-            CommandHandler('read', Read)
+            CallbackQueryHandler(pattern = "Read", callback=Read)
         ],
         states={
             READING: [MessageHandler(Filters.text, inputText)],
