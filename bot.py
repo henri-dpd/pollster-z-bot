@@ -130,7 +130,7 @@ def Write(update, context):
 
 
 if __name__ == '__main__':
-    updater = Updater(token='2082442589:AAG3cwyJd2aBoyOBC46nEdkedPnYh9PeNTk', use_context=True)
+    updater = Updater(token='2082442589:AAH3MNzWrZVcqXWkHNBvq5Y0edK15AWWvRM', use_context=True)
 
     dp = updater.dispatcher
 
