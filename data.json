@@ -1,7 +1,12 @@
 {
     "users": {
         "Henri Daniel": {
-            "messages": []
+            "pulls": [
+                {
+                    "text": "",
+                    "options": []
+                }
+            ]
         }
     }
 }
