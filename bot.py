@@ -190,7 +190,7 @@ if __name__ == '__main__':
     ))
 
     dp.add_handler(ConversationHandler(
-        entry_points=[         
+        entry_points=[
             CallbackQueryHandler(pattern = "Read", callback=Read)
         ],
         states={
