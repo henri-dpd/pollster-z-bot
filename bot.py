@@ -8,7 +8,7 @@ from sys import path
 
 path.append(Path(__file__).parent.absolute())
 
-from create_pull import CreatePull, TakePullText, TAKEPULLTEXT, ENDCREATEPULL
+from create_pull import CreatePull, TakePullText, TAKEPULLTEXT, ENDCREATEPULL, BUTTONS, button_entry_points
 from read_write import Read, inputText, Waiting, Write, READING, NOTREADING, WRITE
 
 
@@ -31,8 +31,7 @@ def Show_Buttons(update, context):
                                   ]))
 
 def SendHelp(update, context):
-    update.message.reply_text(text = "Los botones son los siguientes")
-    Show_Buttons(update, context)
+    update.message.reply_text(text = "Hola, este es un bot diseñado para realizar encuestas. Para comenzar presione \start")
 
 
 if __name__ == '__main__':
@@ -88,6 +87,14 @@ if __name__ == '__main__':
         states={
             READING: [MessageHandler(Filters.text, inputText)],
             NOTREADING: [MessageHandler(Filters.text, Waiting)]
+        },
+        fallbacks=[]
+    ))
+
+    dp.add_handler(ConversationHandler(
+        entry_points=button_entry_points,
+        states={
+            BUTTONS: []
         },
         fallbacks=[]
     ))
