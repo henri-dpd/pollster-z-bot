@@ -1,4 +1,4 @@
-
+﻿
 from typing import Text
 from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
 from telegram.ext import CallbackQueryHandler
@@ -10,6 +10,18 @@ path.append(Path(__file__).parent.absolute())
 
 from create_pull import CreatePull, TakePullText, TAKEPULLTEXT, ENDCREATEPULL, BUTTONS, button_entry_points
 from read_write import Read, inputText, Waiting, Write, READING, NOTREADING, WRITE
+from pymongo.mongo_client import MongoClient
+from update_database import insert_document,find_document,update_document,delete_document
+
+#Creamos el cliente para la base de datos
+client = MongoClient('localhost', 27017)
+#Nos conectamos a la base de datos botdb
+db = client['botdb']
+
+#Tomamos la coleccion stci
+stci = db['stci']
+#Tomamos la coleccion results
+results = db['results']
 
 
 STARTED = 0
