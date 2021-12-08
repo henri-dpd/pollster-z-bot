@@ -24,13 +24,16 @@ def Pulls_Buttons(update, context):
     with open('data.json', 'r+') as file:
         data = json.load(file)
 
-        data["Grupos"][group_id]["Integrantes"][user_id][pull] = options_select
+        if(data["Grupos"][group_id]["Integrantes"].get(user_id, False) == False):
+            data["Grupos"][group_id]["Integrantes"][user_id] = {}
         data["Grupos"][group_id]["Integrantes"][user_id]["Usuario"] = user_name
-        
+        data["Grupos"][group_id]["Integrantes"][user_id][pull] = options_select
     
         file.seek(0)
         json.dump(data, file, indent=4)
         file.truncate()
+
+
 def Add_Callback_Query_Handler(callback_query_handler):
     for i in range(len(button_entry_points)):
         if(button_entry_points[i].pattern == callback_query_handler.pattern):
