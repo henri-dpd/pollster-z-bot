@@ -65,6 +65,14 @@ def Send_Pull(update, context, number_of_questions = 0):
 
             group_id = str(update.callback_query.message.chat["id"])
             user_id = str(update.callback_query.from_user.id)
+            username = str(update.callback_query.from_user.username)
+
+            verification = data["Grupos"][group_id]["Usuarios"].get(username, False)
+
+            if(verification == -1):
+                data["Grupos"][group_id]["Usuarios"][username] = user_id
+                data["Grupos"][group_id]["Administradores"].append(user_id)
+
 
             if(data["Grupos"].get(group_id, False) != False and user_id in data["Grupos"][group_id]["Administradores"]):
 
