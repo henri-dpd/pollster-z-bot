@@ -1,5 +1,4 @@
 
-import os
 import json
 from numpy.core.numeric import NaN
 import pandas as pd
@@ -150,7 +149,7 @@ def Show_Data_Analisis_All_Member(update, context):
                             document = open("CSV/Resultados en el grupo.csv", 'rb')
                         )
 
-                        os.unlink("CSV/Resultados en el grupo.csv")
+                        #os.unlink("CSV/Resultados en el grupo.csv")
 
                     file.seek(0)
                     json.dump(data, file, indent=4)
@@ -233,18 +232,21 @@ def Show_Data_Analisis_One_Member_Enter(update, context):
                     preproc = pd.DataFrame(json.loads(data["Resultados"][group_id]["descripcion"]))
                     personal = preproc[(preproc["Nombre"] == name)]
 
-                    personal.to_csv("CSV/" + name + ". Resultados en la persona" + ".csv", sep=',')
+                    personal.to_csv("CSV/Resultados en la persona" + ".csv", sep=',')
                 
+                    update.message.reply_text("Resultados de la encuesta de: \n @" + name)
+
+
                     update.message.chat.send_action(
                     action = ChatAction.UPLOAD_DOCUMENT,
                     timeout = None
                     )
                 
                     update.message.chat.send_document(
-                    document = open("CSV/" + name + ". Resultados en la persona" + ".csv", 'rb')
+                    document = open("CSV/Resultados en la persona" + ".csv", 'rb')
                     )
 
-                    os.unlink("CSV/" + name + ". Resultados en la persona" + ".csv")
+                    #os.unlink("CSV/" + name + ". Resultados en la persona" + ".csv")
 
 
                 file.seek(0)
