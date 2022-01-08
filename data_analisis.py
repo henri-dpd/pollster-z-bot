@@ -95,15 +95,15 @@ def analisis(update, context):
                                 }
                             }
                         
-                        if(preproc["Media Alegria"]!=NaN):
-                            moda["Alegria"]["valor"] = preproc["Media Alegria"].round().mode()[0]
-                            moda["Alegria"]["porcentaje"] = preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
-                        if(preproc["Media Seriedad"]!=NaN):
-                            moda["Seriedad"]["valor"] = preproc["Media Seriedad"].round().mode()[0]
-                            moda["Seriedad"]["porcentaje"] = preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
-                        if(preproc["Media Mal humor"]!=NaN):
-                            moda["Mal humor"]["valor"] = preproc["Media Mal humor"].round().mode()[0]
-                            moda["Mal humor"]["porcentaje"] = preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
+                        filt = (preproc["Media Alegria"] >= 0)
+                        moda["Alegria"]["valor"] = preproc.loc[filt, ["Media Alegria"]].round().mode()[0]
+                        moda["Alegria"]["porcentaje"] = preproc.loc[filt, ["Media Alegria"]].round().value_counts(normalize=True).max()*100
+                        filt = (preproc["Media Seriedad"] >= 0)
+                        moda["Seriedad"]["valor"] = preproc.loc[filt, ["Media Seriedad"]].round().mode()[0]
+                        moda["Seriedad"]["porcentaje"] = preproc.loc[filt, ["Media Seriedad"]].round().value_counts(normalize=True).max()*100
+                        filt = (preproc["Media Mal humor"] >= 0)
+                        moda["Mal humor"]["valor"] = preproc.loc[filt, ["Media Mal humor"]].round().mode()[0]
+                        moda["Mal humor"]["porcentaje"] = preproc.loc[filt, ["Media Mal humor"]].round().value_counts(normalize=True).max()*100
                         
                         descr = {
                             "descripcion": preproc.to_json(),
