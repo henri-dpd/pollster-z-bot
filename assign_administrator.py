@@ -35,6 +35,10 @@ def inicialization(update, context):
                         data["Grupos"][group_id]["Administradores"].append(user_id)
                         data["Grupos"][group_id]["Usuarios"][username] = user_id
 
+                    update.message.reply_text("El bot ha sido iniciado :) \n" + 
+                                              "Tenga cuidado al utilizarlo, nadie sabe " +
+                                              "qué secretos esconda...")
+
                     file.seek(0)
                     json.dump(data, file, indent=4)
                     file.truncate()
@@ -201,18 +205,18 @@ def Erase_administrator(update, context):
 
 def Show_Administrators(update, context):
 
-    if(update.callback_query.message.chat["type"] == "group" or 
-       update.callback_query.message.chat["type"] == "supergroup"):
+    if(update.message.chat["type"] == "group" or 
+       update.message.chat["type"] == "supergroup"):
         
         with open('data.json', 'r+') as file:
             data = json.load(file)
 
-            group_id = str(update.callback_query.message.chat["id"])
+            group_id = str(update.message.chat["id"])
 
             if(data["Grupos"].get(group_id, False) != False):
 
-                user_id = str(update.callback_query.from_user.id)
-                username = str(update.callback_query.from_user.username)
+                user_id = str(update.from_user.id)
+                username = str(update.from_user.username)
 
                 verification = data["Grupos"][group_id]["Usuarios"].get(username, False)
 

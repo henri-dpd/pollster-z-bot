@@ -45,8 +45,8 @@ def start(update, context):
                 if(user_id in data["Grupos"][group_id]["Administradores"]):
                     update.message.reply_text("Hola soy un bot capaz de medir el humor del grupo a partir de una serie de encuestas.")
                     Show_Pull_Buttons(update, context)
-    else:
-        update.message.reply_text("El bot no ha sido iniciado, por favor, toque: \n /Iniciar_Bot")
+            else:
+                update.message.reply_text("El bot no ha sido iniciado, por favor, toque: \n /Iniciar_Bot")
 
 
 def Show_Pull_Buttons(update, context):
@@ -79,7 +79,7 @@ def SendHelp(update, context):
 
                 user_id = str(update.message.from_user.id)
                 username = str(update.message.from_user.username)
-
+                
                 verification = data["Grupos"][group_id]["Usuarios"].get(username, False)
 
                 if(verification == -1):
