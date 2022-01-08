@@ -82,28 +82,18 @@ def analisis(update, context):
 
                         moda = { 
                                 "Alegria" : {
-                                    "valor": None, 
-                                    "porcentaje": None
+                                    "valor": preproc["Media Alegria"].round().mode(dropna=False)[0], 
+                                    "porcentaje": preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
                                 },
                                 "Seriedad" : {
-                                    "valor": None, 
-                                    "porcentaje": None
+                                    "valor": preproc["Media Seriedad"].round().mode(dropna=False)[0], 
+                                    "porcentaje": preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
                                 },
                                 "Mal humor": {
-                                    "valor": None, 
-                                    "porcentaje": None
+                                    "valor": preproc["Media Mal humor"].round().mode(dropna=False)[0], 
+                                    "porcentaje": preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
                                 }
                             }
-                        
-                        filt = (preproc["Media Alegria"] >= 0)
-                        moda["Alegria"]["valor"] = preproc.loc[filt, ["Media Alegria"]]["Media Alegria"].round().mode()[0]
-                        moda["Alegria"]["porcentaje"] = preproc.loc[filt, ["Media Alegria"]]["Media Alegria"].round().value_counts(normalize=True).max()*100
-                        filt = (preproc["Media Seriedad"] >= 0)
-                        moda["Seriedad"]["valor"] = preproc.loc[filt, ["Media Seriedad"]]["Media Seriedad"].round().mode()[0]
-                        moda["Seriedad"]["porcentaje"] = preproc.loc[filt, ["Media Seriedad"]]["Media Seriedad"].round().value_counts(normalize=True).max()*100
-                        filt = (preproc["Media Mal humor"] >= 0)
-                        moda["Mal humor"]["valor"] = preproc.loc[filt, ["Media Mal humor"]]["Media Mal humor"].round().mode()[0]
-                        moda["Mal humor"]["porcentaje"] = preproc.loc[filt, ["Media Mal humor"]]["Media Mal humor"].round().value_counts(normalize=True).max()*100
                         
                         descr = {
                             "descripcion": preproc.to_json(),
