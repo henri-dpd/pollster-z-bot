@@ -2,9 +2,6 @@
 import json
 from numpy.core.numeric import NaN
 import pandas as pd
-import matplotlib.pyplot as plt
-import scipy.cluster.hierarchy as sch
-from sklearn.cluster import AgglomerativeClustering
 from telegram import ChatAction
 from telegram.ext.conversationhandler import ConversationHandler
 
