@@ -82,20 +82,28 @@ def analisis(update, context):
 
                         moda = { 
                                 "Alegria" : {
-                                    "valor": preproc["Media Alegria"].round().mode()[0], 
-                                    "porcentaje": preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
+                                    "valor": None, 
+                                    "porcentaje": None
                                 },
                                 "Seriedad" : {
-                                    "valor": preproc["Media Seriedad"].round().mode()[0], 
-                                    "porcentaje": preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
+                                    "valor": None, 
+                                    "porcentaje": None
                                 },
                                 "Mal humor": {
-                                    "valor": preproc["Media Mal humor"].round().mode()[0], 
-                                    "porcentaje": preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
+                                    "valor": None, 
+                                    "porcentaje": None
                                 }
                             }
                         
-                        #corr = preproc.iloc[:,[0,3,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]].corr()
+                        if(preproc["Media Alegria"]!=NaN):
+                            moda["Alegria"]["valor"] = preproc["Media Alegria"].round().mode()[0]
+                            moda["Alegria"]["porcentaje"] = preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
+                        if(preproc["Media Seriedad"]!=NaN):
+                            moda["Seriedad"]["valor"] = preproc["Media Seriedad"].round().mode()[0]
+                            moda["Seriedad"]["porcentaje"] = preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
+                        if(preproc["Media Mal humor"]!=NaN):
+                            moda["Mal humor"]["valor"] = preproc["Media Mal humor"].round().mode()[0]
+                            moda["Mal humor"]["porcentaje"] = preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
                         
                         descr = {
                             "descripcion": preproc.to_json(),
