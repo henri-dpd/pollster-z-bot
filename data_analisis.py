@@ -284,16 +284,19 @@ def Data_Description(update, context):
                         
                         result = json.loads(data["Resultados"][group_id]["resultado"])
                         moda = data["Resultados"][group_id]["moda"]
+                        message_text = ""
+                        try:
+                            message_text = "Medias: \n"
+                            for d in result:
+                                message_text += d +": "+ str(round(result[d],2)) + "\n"
+                            message_text += "Modas: \n"
+                            for d in moda:
+                                message_text += d +": \n"
+                                for m in moda[d]:
+                                    message_text += m + ": " + str(round(moda[d][m],2)) + "\n"
+                        except:
+                            message_text = "No hay datos a describir"
                         
-                        message_text = "Medias: \n"
-                        for d in result:
-                            message_text += d +": "+ str(round(result[d],2)) + "\n"
-                        message_text += "Modas: \n"
-                        for d in moda:
-                            message_text += d +": \n"
-                            for m in moda[d]:
-                                message_text += m + ": " + str(round(moda[d][m],2)) + "\n"
-
                         update.callback_query.message.reply_text(message_text)
 
                     file.seek(0)
