@@ -82,15 +82,15 @@ def analisis(update, context):
 
                         moda = { 
                                 "Alegria" : {
-                                    "valor": preproc["Media Alegria"].round().mode(dropna=False)[0], 
+                                    "valor": preproc["Media Alegria"].round().mode(dropna=False), 
                                     "porcentaje": preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
                                 },
                                 "Seriedad" : {
-                                    "valor": preproc["Media Seriedad"].round().mode(dropna=False)[0], 
+                                    "valor": preproc["Media Seriedad"].round().mode(dropna=False), 
                                     "porcentaje": preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
                                 },
                                 "Mal humor": {
-                                    "valor": preproc["Media Mal humor"].round().mode(dropna=False)[0], 
+                                    "valor": preproc["Media Mal humor"].round().mode(dropna=False), 
                                     "porcentaje": preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
                                 }
                             }
