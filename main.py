@@ -46,7 +46,7 @@ def start(update, context):
                     update.message.reply_text("Hola soy un bot capaz de medir el humor del grupo a partir de una serie de encuestas.")
                     Show_Pull_Buttons(update, context)
             else:
-                update.message.reply_text("El bot no ha sido iniciado, por favor, toque: \n /Iniciar_Bot")
+                update.message.reply_text("El bot no ha sido iniciado, por favor, toque: \n /iniciar_bot")
 
 
 def Show_Pull_Buttons(update, context):
@@ -90,11 +90,11 @@ def SendHelp(update, context):
                     update.message.reply_text(text = "Hola, soy bot diseñado para realizar encuestas. \n" +
                                                     "Solo puedo ser usado por ciertos elegidos. \n\n" +
                                                     "Mis comandos son: \n" +
-                                                    "/Start \n" +
-                                                    "/Agregar_Administrador \n" +
-                                                    "/Eliminar_Administrador \n" +
-                                                    "/Mostrar_Administradores \n" +
-                                                    "/Mostrar_Analisis \n"
+                                                    "/start \n" +
+                                                    "/agregar_administrador \n" +
+                                                    "/eliminar_administrador \n" +
+                                                    "/mostrar_administradores \n" +
+                                                    "/mostrar_analisis \n"
                                                     )
 
 
@@ -106,7 +106,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[
-            CommandHandler('Iniciar_Bot', inicialization)
+            CommandHandler('iniciar_bot', inicialization)
         ],
         states={
             INICIALIZATION: []
@@ -116,7 +116,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[
-            CommandHandler('Start', start)
+            CommandHandler('start', start)
         ],
         states={
             STARTED: []
@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[
-            CommandHandler('Mostrar_Analisis', Show_Analisis_Buttons)
+            CommandHandler('mostrar_analisis', Show_Analisis_Buttons)
         ],
         states={
             SHOW_ANALISIS: []
@@ -137,7 +137,7 @@ if __name__ == '__main__':
     
     dp.add_handler(ConversationHandler(
         entry_points=[
-            CommandHandler('Agregar_Administrador', add_administrator)
+            CommandHandler('agregar_administrador', add_administrator)
         ],
         states={
             ADD_ADMINISTRATOR: [MessageHandler(Filters.text, enter_administrator)]
@@ -147,7 +147,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[
-            CommandHandler('Eliminar_Administrador', Remove_administrator)
+            CommandHandler('eliminar_administrador', Remove_administrator)
         ],
         states={
             REMOVE_ADMINISTRATOR: [MessageHandler(Filters.text, Erase_administrator)]
@@ -157,7 +157,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[
-            CommandHandler('Mostrar_Administradores', Show_Administrators)
+            CommandHandler('mostrar_administradores', Show_Administrators)
         ],
         states={
             SHOW_ADMINISTRATOR: []
@@ -167,7 +167,7 @@ if __name__ == '__main__':
 
     dp.add_handler(ConversationHandler(
         entry_points=[
-            CommandHandler('Ayuda', SendHelp)
+            CommandHandler('ayuda', SendHelp)
         ],
         states={
             HELP: []
