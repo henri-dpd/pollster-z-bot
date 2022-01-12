@@ -81,20 +81,30 @@ def analisis(update, context):
                         result = preproc.loc[:,"Alegria":].sum()/df["Nombre"].count()
 
                         moda = { 
-                                "Alegria" : {
-                                    "valor": preproc["Media Alegria"].round().mode(dropna=False), 
-                                    "porcentaje": preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
-                                },
-                                "Seriedad" : {
-                                    "valor": preproc["Media Seriedad"].round().mode(dropna=False), 
-                                    "porcentaje": preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
-                                },
-                                "Mal humor": {
-                                    "valor": preproc["Media Mal humor"].round().mode(dropna=False), 
-                                    "porcentaje": preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
-                                }
+                            "Alegria" : {
+                                "valor": "-",
+                                "porcentaje": "-"
+                            },
+                            "Seriedad" : {
+                                "valor": "-",
+                                "porcentaje": "-"
+                            },
+                            "Mal humor": {
+                                "valor": "-", 
+                                "porcentaje": "-"
                             }
-                        
+                        }
+                        if not preproc["Media Alegria"].empty:
+                            moda["Alegria"]["valor"] = preproc["Media Alegria"].round().mode(dropna=False)[0]
+                            moda["Alegria"]["porcentaje"] = preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
+                        if not preproc["Media Seriedad"].empty:
+                            moda["Seriedad"]["valor"] = preproc["Media Seriedad"].round().mode(dropna=False)[0]
+                            moda["Seriedad"]["porcentaje"] = preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
+                        if not preproc["Media Mal humor"].empty:
+                            moda["Mal humor"]["valor"] = preproc["Media Mal humor"].round().mode(dropna=False)[0]
+                            moda["Mal humor"]["porcentaje"] = preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
+          
+          
                         descr = {
                             "descripcion": preproc.to_json(),
                             "resultado": result.to_json(),
