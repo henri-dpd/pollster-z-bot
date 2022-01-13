@@ -94,13 +94,13 @@ def analisis(update, context):
                                 "porcentaje": "-"
                             }
                         }
-                        if not preproc["Media Alegria"].empty:
+                        if not preproc["Media Alegria"].empty and not pd.isna(preproc["Media Alegria"].round().mode(dropna=False)[0]):
                             moda["Alegria"]["valor"] = preproc["Media Alegria"].round().mode(dropna=False)[0]
                             moda["Alegria"]["porcentaje"] = preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
-                        if not preproc["Media Seriedad"].empty:
+                        if not preproc["Media Seriedad"].empty and not pd.isna(preproc["Media Seriedad"].round().mode(dropna=False)[0]):
                             moda["Seriedad"]["valor"] = preproc["Media Seriedad"].round().mode(dropna=False)[0]
                             moda["Seriedad"]["porcentaje"] = preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
-                        if not preproc["Media Mal humor"].empty:
+                        if not preproc["Media Mal humor"].empty and not pd.isna(preproc["Media Mal humor"].round().mode(dropna=False)[0]):
                             moda["Mal humor"]["valor"] = preproc["Media Mal humor"].round().mode(dropna=False)[0]
                             moda["Mal humor"]["porcentaje"] = preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
           

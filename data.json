@@ -1,7 +1,113 @@
 {
     "Grupos": {
+        "-1001297669438": {
+            "Integrantes": {},
+            "Nombre del grupo": "Badabun tissss",
+            "Pregunta Actual": -1,
+            "Administradores": [
+                "707317272",
+                "1067047315",
+                "837165115"
+            ],
+            "Usuarios": {},
+            "Nuevo Administrador": 0,
+            "Analisis": 0
+        },
+        "-677772752": {
+            "Integrantes": {},
+            "Nombre del grupo": "Badabun tissss",
+            "Pregunta Actual": -1,
+            "Administradores": [
+                "707317272",
+                "1067047315",
+                "837165115"
+            ],
+            "Usuarios": {},
+            "Nuevo Administrador": 0,
+            "Analisis": 0
+        },
+        "-1001178327031": {
+            "Integrantes": {
+                "819605269": {
+                    "Usuario": "Unshaped_Whisper",
+                    "1": 4,
+                    "2": 1,
+                    "3": 2,
+                    "4": 3,
+                    "5": 2,
+                    "6": 4,
+                    "7": 3
+                },
+                "1067047315": {
+                    "Usuario": "hnadie",
+                    "1": 4,
+                    "7": 4,
+                    "6": 3,
+                    "5": 1,
+                    "4": 4,
+                    "3": 1,
+                    "2": 4,
+                    "8": 3,
+                    "9": 3,
+                    "10": 3,
+                    "11": 2,
+                    "12": 3
+                },
+                "814696382": {
+                    "Usuario": "i_am_a_teapot_E418",
+                    "7": 1
+                },
+                "801589872": {
+                    "Usuario": "Sangre_Roja",
+                    "1": 3,
+                    "2": 3,
+                    "3": 3,
+                    "4": 3,
+                    "5": 3,
+                    "6": 3,
+                    "7": 3,
+                    "8": 2,
+                    "9": 2,
+                    "10": 3,
+                    "11": 3,
+                    "12": 3,
+                    "13": 2,
+                    "14": 3,
+                    "15": 3,
+                    "16": 3
+                }
+            },
+            "Nombre del grupo": "MatCom 3roCC(Offtopic)",
+            "Pregunta Actual": 11,
+            "Administradores": [
+                "707317272",
+                "1067047315",
+                "837165115"
+            ],
+            "Usuarios": {},
+            "Nuevo Administrador": 0,
+            "Analisis": 0
+        }
     },
     "Resultados": {
+        "-1001297669438": {
+            "descripcion": "{\"Nombre\":{},\"Alegria\":{},\"Porcentaje Alegria\":{},\"Media Alegria\":{},\"Mal humor\":{},\"Porcentaje Mal humor\":{},\"Media Mal humor\":{},\"Seriedad\":{},\"Porcentaje Seriedad\":{},\"Media Seriedad\":{},\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":{},\"Bajo umbral para la risa y sonrisa.\":{},\"Estilo de comunicacion sobrio.\":{},\"Estilo de interaccion alegre\":{},\"Irritabilidad en situaciones alegres.\":{},\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":{},\"Preferir actividades concretas y racionales\":{},\"Prevalencia de animo alegre.\":{},\"Prevalencia de estados serios.\":{},\"Prevalencia de mal humor\":{},\"Prevalencia de tristeza\":{},\"Sentimientos de irritabilidad.\":{},\"Tristeza en situaciones alegres.\":{},\"Vision positiva de las circunstancias adversas de la vida.\":{},\"Vivir en torno a metas.\":{}}",
+            "resultado": "{\"Alegria\":null,\"Porcentaje Alegria\":null,\"Media Alegria\":null,\"Mal humor\":null,\"Porcentaje Mal humor\":null,\"Media Mal humor\":null,\"Seriedad\":null,\"Porcentaje Seriedad\":null,\"Media Seriedad\":null,\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":null,\"Bajo umbral para la risa y sonrisa.\":null,\"Estilo de comunicacion sobrio.\":null,\"Estilo de interaccion alegre\":null,\"Irritabilidad en situaciones alegres.\":null,\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":null,\"Preferir actividades concretas y racionales\":null,\"Prevalencia de animo alegre.\":null,\"Prevalencia de estados serios.\":null,\"Prevalencia de mal humor\":null,\"Prevalencia de tristeza\":null,\"Sentimientos de irritabilidad.\":null,\"Tristeza en situaciones alegres.\":null,\"Vision positiva de las circunstancias adversas de la vida.\":null,\"Vivir en torno a metas.\":null}",
+            "moda": {
+                "Alegria": {
+                    "valor": "-",
+                    "porcentaje": "-"
+                },
+                "Seriedad": {
+                    "valor": "-",
+                    "porcentaje": "-"
+                },
+                "Mal humor": {
+                    "valor": "-",
+                    "porcentaje": "-"
+                }
+            }
+        }
     },
     "Preguntas": [
         {
