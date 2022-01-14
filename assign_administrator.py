@@ -229,8 +229,8 @@ def Show_Administrators(update, context):
                     
                     administrators = data["Grupos"][group_id]["Usuarios"].keys()
                     text = ""
-                    for i in range(len(administrators)):
-                        text = administrators[i] + "\n"
+                    for i in administrators:
+                        text = str(i) + "\n"
                     if(text == ""):
                         update.message.reply_text("Solo los dioses son administradores de este grupo")
                     else:
