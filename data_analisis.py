@@ -104,6 +104,7 @@ def analisis(update, context):
 
                     result = preproc.loc[:,"Alegria":].sum()/df["Nombre"].count()
 
+<<<<<<< HEAD
                     moda = { 
                             "Alegria" : {
                                 "valor": preproc["Media Alegria"].round().mode(dropna=False)[0], 
@@ -117,6 +118,38 @@ def analisis(update, context):
                                 "valor": preproc["Media Mal humor"].round().mode(dropna=False)[0], 
                                 "porcentaje": preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
                             }
+=======
+                        moda = { 
+                            "Alegria" : {
+                                "valor": "-",
+                                "porcentaje": "-"
+                            },
+                            "Seriedad" : {
+                                "valor": "-",
+                                "porcentaje": "-"
+                            },
+                            "Mal humor": {
+                                "valor": "-", 
+                                "porcentaje": "-"
+                            }
+                        }
+                        if not preproc["Media Alegria"].empty and not pd.isna(preproc["Media Alegria"].round().mode(dropna=False)[0]):
+                            moda["Alegria"]["valor"] = preproc["Media Alegria"].round().mode(dropna=False)[0]
+                            moda["Alegria"]["porcentaje"] = preproc["Media Alegria"].round().value_counts(normalize=True).max()*100
+                        if not preproc["Media Seriedad"].empty and not pd.isna(preproc["Media Seriedad"].round().mode(dropna=False)[0]):
+                            moda["Seriedad"]["valor"] = preproc["Media Seriedad"].round().mode(dropna=False)[0]
+                            moda["Seriedad"]["porcentaje"] = preproc["Media Seriedad"].round().value_counts(normalize=True).max()*100
+                        if not preproc["Media Mal humor"].empty and not pd.isna(preproc["Media Mal humor"].round().mode(dropna=False)[0]):
+                            moda["Mal humor"]["valor"] = preproc["Media Mal humor"].round().mode(dropna=False)[0]
+                            moda["Mal humor"]["porcentaje"] = preproc["Media Mal humor"].round().value_counts(normalize=True).max()*100
+          
+          
+                        descr = {
+                            "descripcion": preproc.to_json(),
+                            "resultado": result.to_json(),
+                            "moda": moda,
+                        #    "correlacion por categoria y subcategoria": corr
+>>>>>>> 4435a0f6a35770e7a4e82a22d441b8c3cc10e2af
                         }
                     
                     descr = {
@@ -265,16 +298,19 @@ def Data_Description(update, context):
                     
                         result = json.loads(data["Resultados"][group_id]["resultado"])
                         moda = data["Resultados"][group_id]["moda"]
+                        message_text = ""
+                        try:
+                            message_text = "Medias: \n"
+                            for d in result:
+                                message_text += d +": "+ str(round(result[d],2)) + "\n"
+                            message_text += "Modas: \n"
+                            for d in moda:
+                                message_text += d +": \n"
+                                for m in moda[d]:
+                                    message_text += m + ": " + str(round(moda[d][m],2)) + "\n"
+                        except:
+                            message_text = "No hay datos a describir"
                         
-                        message_text = "Medias: \n"
-                        for d in result:
-                            message_text += d +": "+ str(round(result[d],2)) + "\n"
-                        message_text += "Modas: \n"
-                        for d in moda:
-                            message_text += d +": \n"
-                            for m in moda[d]:
-                                message_text += m + ": " + str(round(moda[d][m],2)) + "\n"
-
                         update.callback_query.message.reply_text(message_text)
 
                 file.seek(0)
