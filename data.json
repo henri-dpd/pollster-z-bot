@@ -74,7 +74,12 @@
                     "9": 3,
                     "10": 3,
                     "11": 2,
-                    "12": 3
+                    "12": 3,
+                    "13": 3,
+                    "14": 3,
+                    "15": 2,
+                    "16": 3,
+                    "17": 3
                 },
                 "814696382": {
                     "Usuario": "i_am_a_teapot_E418",
@@ -96,18 +101,55 @@
                     "12": 3,
                     "13": 2,
                     "14": 3,
-                    "15": 3,
+                    "15": 2,
+                    "16": 3,
+                    "17": 3
+                },
+                "707875418": {
+                    "Usuario": "rocioog",
+                    "13": 3,
+                    "14": 4,
+                    "15": 4,
                     "16": 3
+                },
+                "516993638": {
+                    "Usuario": "Chains99",
+                    "13": 4,
+                    "14": 3,
+                    "15": 3,
+                    "16": 3,
+                    "17": 3
+                },
+                "626473095": {
+                    "Usuario": "omaro43",
+                    "13": 1
                 }
             },
             "Nombre del grupo": "MatCom 3roCC(Offtopic)",
-            "Pregunta Actual": 11,
+            "Pregunta Actual": 23,
             "Administradores": [
                 "707317272",
                 "1067047315",
                 "837165115"
             ],
-            "Usuarios": {},
+            "Usuarios": {
+                "ale_esc": -1
+            },
+            "Nuevo Administrador": 0,
+            "Analisis": 0
+        },
+        "-1001590021784": {
+            "Integrantes": {},
+            "Nombre del grupo": "Proyecto Matem\u00e1tica Aplicada \ud83d\udd90\ufe0f\u270c\ufe0f",
+            "Pregunta Actual": -1,
+            "Administradores": [
+                "707317272",
+                "1067047315",
+                "837165115"
+            ],
+            "Usuarios": {
+                "fernan2rodriguez": -1
+            },
             "Nuevo Administrador": 0,
             "Analisis": 0
         }
