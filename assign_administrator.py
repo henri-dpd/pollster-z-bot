@@ -204,7 +204,7 @@ def Erase_administrator(update, context):
                 return ConversationHandler.END            
 
 def Show_Administrators(update, context):
-
+    
     if(update.message.chat["type"] == "group" or 
        update.message.chat["type"] == "supergroup"):
         
@@ -214,9 +214,9 @@ def Show_Administrators(update, context):
             group_id = str(update.message.chat["id"])
 
             if(data["Grupos"].get(group_id, False) != False):
-
-                user_id = str(update.from_user.id)
-                username = str(update.from_user.username)
+                
+                user_id = str(update.message.from_user.id)
+                username = str(update.message.from_user.username)
 
                 verification = data["Grupos"][group_id]["Usuarios"].get(username, False)
 
@@ -226,10 +226,14 @@ def Show_Administrators(update, context):
 
 
                 if(user_id in data["Grupos"][group_id]["Administradores"]):
+                    
                     administrators = data["Grupos"][group_id]["Usuarios"].keys()
                     text = ""
                     for i in range(len(administrators)):
                         text = administrators[i] + "\n"
+                    if(text == ""):
+                        update.message.reply_text("Solo los dioses son administradores de este grupo")
+                    else:
                         update.message.reply_text("Los administratores del bot en este grupo son: \n" + text)
                 
                 file.seek(0)

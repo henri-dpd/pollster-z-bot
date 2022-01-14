@@ -1,6 +1,8 @@
 from typing import Text
 import json
 from os import path
+import telegram
+from telegram import user
 from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
 from telegram.ext import CallbackQueryHandler
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
@@ -11,8 +13,8 @@ path.append(Path(__file__).parent.absolute())
 
 from send_pull import BUTTONS, TAKEPULLTEXT, button_entry_points
 from send_pull import Send_Pull_1, Send_Pull_3, Send_Pull_5, Send_Pull_7
-from data_analisis import DATA_ANALISIS_ALL_MEMBER, DATA_ANALISIS_ONE_MEMBER, DATA_DESCRIPTION 
-from data_analisis import analisis, Show_Data_Analisis_All_Member, Data_Description
+from data_analisis import DATA_ANALISIS_ALL_MEMBER, DATA_ANALISIS_ONE_MEMBER, DATA_DESCRIPTION, ENABLE_ANALISIS 
+from data_analisis import enable_analisis, Show_Data_Analisis_All_Member, Data_Description, analisis
 from data_analisis import Show_Data_Analisis_One_Member, Show_Data_Analisis_One_Member_Enter
 from assign_administrator import INICIALIZATION, ADD_ADMINISTRATOR, REMOVE_ADMINISTRATOR, SHOW_ADMINISTRATOR 
 from assign_administrator import inicialization, add_administrator, enter_administrator
@@ -59,13 +61,19 @@ def Show_Pull_Buttons(update, context):
                                   ]))
 
 def Show_Analisis_Buttons(update, context):
-    analisis(update, context)
-    update.message.reply_text(text = "Botones Disponibles del PollsterZBot",
+    if(update.message.chat["type"] == "private"):
+        with open('data.json', 'r+') as file:
+            data = json.load(file)
+            user_id = str(update.message.from_user.id)
+            if(user_id in data["Analisis_Para_Administradores"].keys()):
+                analisis(update, context)
+                update.message.reply_text(text = "Botones Disponibles del PollsterZBot",
                               reply_markup = InlineKeyboardMarkup([
                                   [InlineKeyboardButton(text = "Mostrar Análisis", callback_data = "Show_Data_Analisis_All_Member")],
                                   [InlineKeyboardButton(text = "Mostrar Análisis de un Miembro", callback_data = "Show_Data_Analisis_One_Member")],
                                   [InlineKeyboardButton(text = "Descripción de los Datos", callback_data = "Data_Description")]
                                   ]))
+            
 
 
 def SendHelp(update, context):
@@ -94,8 +102,9 @@ def SendHelp(update, context):
                                                     "/agregar_administrador \n" +
                                                     "/eliminar_administrador \n" +
                                                     "/mostrar_administradores \n" +
-                                                    "/mostrar_analisis \n"
+                                                    "/habilitar_analisis \n"
                                                     )
+
 
 
 if __name__ == '__main__':
@@ -134,6 +143,15 @@ if __name__ == '__main__':
         fallbacks=[]
     ))
 
+    dp.add_handler(ConversationHandler(
+        entry_points=[
+            CommandHandler('habilitar_analisis', enable_analisis)
+        ],
+        states={
+            ENABLE_ANALISIS: []
+        },
+        fallbacks=[]
+    ))
     
     dp.add_handler(ConversationHandler(
         entry_points=[
