@@ -35,7 +35,7 @@ def Restart_Pull(update, context):
                     actual_question = data["Grupos"][group_id]["Pregunta Actual"]
 
                     if(actual_question == 59):
-                        data["Grupos"][group_id]["Pregunta Actual"] = 0
+                        data["Grupos"][group_id]["Pregunta Actual"] = -1
                         update.message.reply_text("Encuesta reiniciada :)")
                     else:
                         if(data["Grupos"][group_id]["Reiniciar Encuesta"] == 0):
