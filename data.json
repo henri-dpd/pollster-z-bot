@@ -11,7 +11,8 @@
             ],
             "Usuarios": {},
             "Nuevo Administrador": 0,
-            "Analisis": 0
+            "Analisis": 0,
+            "Reiniciar Encuesta": 0
         },
         "-677772752": {
             "Integrantes": {
@@ -47,7 +48,8 @@
             ],
             "Usuarios": {},
             "Nuevo Administrador": 0,
-            "Analisis": 0
+            "Analisis": 0,
+            "Reiniciar Encuesta": 0
         },
         "-1001178327031": {
             "Integrantes": {
@@ -79,7 +81,14 @@
                     "14": 3,
                     "15": 2,
                     "16": 3,
-                    "17": 3
+                    "17": 3,
+                    "25": 3,
+                    "26": 3,
+                    "27": 1,
+                    "28": 3,
+                    "29": 4,
+                    "30": 3,
+                    "31": 3
                 },
                 "814696382": {
                     "Usuario": "i_am_a_teapot_E418",
@@ -103,7 +112,21 @@
                     "14": 3,
                     "15": 2,
                     "16": 3,
-                    "17": 3
+                    "17": 3,
+                    "25": 2,
+                    "26": 3,
+                    "27": 2,
+                    "28": 3,
+                    "29": 2,
+                    "30": 3,
+                    "31": 2,
+                    "32": 3,
+                    "33": 3,
+                    "34": 2,
+                    "35": 3,
+                    "36": 3,
+                    "37": 2,
+                    "38": 3
                 },
                 "707875418": {
                     "Usuario": "rocioog",
@@ -123,10 +146,46 @@
                 "626473095": {
                     "Usuario": "omaro43",
                     "13": 1
+                },
+                "707317272": {
+                    "Usuario": "ale_esc",
+                    "31": 3,
+                    "30": 3,
+                    "29": 1,
+                    "28": 3,
+                    "27": 1,
+                    "26": 2,
+                    "25": 4
+                },
+                "922006984": {
+                    "Usuario": "alejbv",
+                    "25": 3,
+                    "26": 4,
+                    "27": 4
+                },
+                "937662900": {
+                    "Usuario": "jmv21",
+                    "38": 4,
+                    "36": 2,
+                    "37": 3,
+                    "35": 2,
+                    "34": 3,
+                    "33": 2,
+                    "32": 2
+                },
+                "650135700": {
+                    "Usuario": "jrr00",
+                    "32": 3,
+                    "33": 3,
+                    "34": 2,
+                    "35": 3,
+                    "36": 3,
+                    "37": 1,
+                    "38": 4
                 }
             },
             "Nombre del grupo": "MatCom 3roCC(Offtopic)",
-            "Pregunta Actual": 23,
+            "Pregunta Actual": 44,
             "Administradores": [
                 "707317272",
                 "1067047315",
@@ -136,27 +195,43 @@
                 "ale_esc": -1
             },
             "Nuevo Administrador": 0,
-            "Analisis": 0
+            "Analisis": 0,
+            "Reiniciar Encuesta": 0
         },
         "-1001590021784": {
-            "Integrantes": {},
+            "Integrantes": {
+                "823911446": {
+                    "Usuario": "fernan2rodriguez",
+                    "1": 1,
+                    "2": 3,
+                    "3": 2,
+                    "4": 4,
+                    "5": 2,
+                    "6": 2,
+                    "7": 1
+                }
+            },
             "Nombre del grupo": "Proyecto Matem\u00e1tica Aplicada \ud83d\udd90\ufe0f\u270c\ufe0f",
-            "Pregunta Actual": -1,
+            "Pregunta Actual": 6,
             "Administradores": [
                 "707317272",
                 "1067047315",
-                "837165115"
+                "837165115",
+                "823911446"
             ],
             "Usuarios": {
-                "fernan2rodriguez": -1
+                "fernan2rodriguez": "823911446"
             },
             "Nuevo Administrador": 0,
-            "Analisis": 0
+            "Analisis": 0,
+            "Reiniciar Encuesta": 0
         }
     },
     "Analisis_Para_Administradores": {
-        "707317272": "-677772752",
-        "1067047315": "-677772752"
+        "707317272": "-1001590021784",
+        "1067047315": "-1001590021784",
+        "837165115": "-677772752",
+        "823911446": "-1001590021784"
     },
     "Resultados": {
         "-1001297669438": {
@@ -191,6 +266,24 @@
                 },
                 "Mal humor": {
                     "valor": 4.0,
+                    "porcentaje": 100.0
+                }
+            }
+        },
+        "-1001590021784": {
+            "descripcion": "{\"Nombre\":{\"0\":\"fernan2rodriguez\"},\"Alegria\":{\"0\":3.0},\"Porcentaje Alegria\":{\"0\":3.75},\"Media Alegria\":{\"0\":1.5},\"Mal humor\":{\"0\":3.0},\"Porcentaje Mal humor\":{\"0\":3.75},\"Media Mal humor\":{\"0\":1.5},\"Seriedad\":{\"0\":9.0},\"Porcentaje Seriedad\":{\"0\":11.25},\"Media Seriedad\":{\"0\":3.0},\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":{\"0\":null},\"Bajo umbral para la risa y sonrisa.\":{\"0\":null},\"Estilo de comunicacion sobrio.\":{\"0\":null},\"Estilo de interaccion alegre\":{\"0\":null},\"Irritabilidad en situaciones alegres.\":{\"0\":null},\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":{\"0\":null},\"Preferir actividades concretas y racionales\":{\"0\":3.0},\"Prevalencia de animo alegre.\":{\"0\":2.0},\"Prevalencia de estados serios.\":{\"0\":3.0},\"Prevalencia de mal humor\":{\"0\":null},\"Prevalencia de tristeza\":{\"0\":1.0},\"Sentimientos de irritabilidad.\":{\"0\":2.0},\"Tristeza en situaciones alegres.\":{\"0\":null},\"Vision positiva de las circunstancias adversas de la vida.\":{\"0\":1.0},\"Vivir en torno a metas.\":{\"0\":null}}",
+            "resultado": "{\"Alegria\":3.0,\"Porcentaje Alegria\":3.75,\"Media Alegria\":1.5,\"Mal humor\":3.0,\"Porcentaje Mal humor\":3.75,\"Media Mal humor\":1.5,\"Seriedad\":9.0,\"Porcentaje Seriedad\":11.25,\"Media Seriedad\":3.0,\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":0.0,\"Bajo umbral para la risa y sonrisa.\":0.0,\"Estilo de comunicacion sobrio.\":0.0,\"Estilo de interaccion alegre\":0.0,\"Irritabilidad en situaciones alegres.\":0.0,\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":0.0,\"Preferir actividades concretas y racionales\":3.0,\"Prevalencia de animo alegre.\":2.0,\"Prevalencia de estados serios.\":3.0,\"Prevalencia de mal humor\":0.0,\"Prevalencia de tristeza\":1.0,\"Sentimientos de irritabilidad.\":2.0,\"Tristeza en situaciones alegres.\":0.0,\"Vision positiva de las circunstancias adversas de la vida.\":1.0,\"Vivir en torno a metas.\":0.0}",
+            "moda": {
+                "Alegria": {
+                    "valor": 2.0,
+                    "porcentaje": 100.0
+                },
+                "Seriedad": {
+                    "valor": 3.0,
+                    "porcentaje": 100.0
+                },
+                "Mal humor": {
+                    "valor": 2.0,
                     "porcentaje": 100.0
                 }
             }

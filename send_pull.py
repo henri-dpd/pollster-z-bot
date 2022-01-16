@@ -7,8 +7,50 @@ from telegram.utils.helpers import DEFAULT_FALSE
 
 TAKEPULLTEXT = 0
 BUTTONS = 0
+RESTART_PULL = 0
 
 button_entry_points = []
+
+def Restart_Pull(update, context):
+
+    if(update.message.chat["type"] == "group" or update.message.chat["type"] == "supergroup"):
+        with open('data.json', 'r+') as file:
+            data = json.load(file)
+
+            group_id = str(update.message.chat["id"])
+
+            if(data["Grupos"].get(group_id, False) != False):
+
+                user_id = str(update.message.from_user.id)
+                username = str(update.message.from_user.username)
+
+                verification = data["Grupos"][group_id]["Usuarios"].get(username, False)
+
+                if(verification == -1):
+                    data["Grupos"][group_id]["Usuarios"][username] = user_id
+                    data["Grupos"][group_id]["Administradores"].append(user_id)
+
+                if(user_id in data["Grupos"][group_id]["Administradores"]):
+                    
+                    actual_question = data["Grupos"][group_id]["Pregunta Actual"]
+
+                    if(actual_question == 60):
+                        data["Grupos"][group_id]["Pregunta Actual"] = 0
+                        update.message.reply_text("Encuesta reiniciada :)")
+                    else
+                        if(data["Grupos"][group_id]["Reiniciar Encuesta"] == 0):
+                            data["Grupos"][group_id]["Reiniciar Encuesta"] = 1
+                            update.message.reply_text("Todas las preguntas no han sido mostradas, \n" +
+                            "Está seguro que quiere reiniciarlas?, de estarlo active el comando de nuevo.")
+                        else:
+                            data["Grupos"][group_id]["Pregunta Actual"] = 0
+                            data["Grupos"][group_id]["Reiniciar Encuesta"] = 0
+                            update.message.reply_text("Encuesta reiniciada :)")
+
+
+                    file.seek(0)
+                    json.dump(data, file, indent=4)
+                    file.truncate()
 
 def Pulls_Buttons(update, context):
 
@@ -85,37 +127,42 @@ def Send_Pull(update, context, number_of_questions = 0):
 
                     questions = data["Preguntas"]
 
+                    data["Grupos"][group_id]["Reiniciar Encuesta"] = 0
+
                     for i in range(number_of_questions):
 
-                        actual_question = actual_question + 1
 
-                        if(actual_question == 60):
-                            actual_question = 0
+                        if(actual_question < 60):
+                            actual_question = actual_question + 1   
                         
-                        pull_text = questions[actual_question]["Pregunta"] +"\n\n"
+                            pull_text = questions[actual_question]["Pregunta"] +"\n\n"
                         
-                        buttons = [[InlineKeyboardButton(
-                            text = "Completamente en Desacuerdo",
-                            callback_data = (str(actual_question + 1) + "_1"))],
+                            buttons = [[InlineKeyboardButton(
+                                text = "Completamente en Desacuerdo",
+                                callback_data = (str(actual_question + 1) + "_1"))],
 
-                            [InlineKeyboardButton(
-                            text = "Moderadamente en Desacuerdo",
-                            callback_data = (str(actual_question + 1) + "_2"))],
+                                [InlineKeyboardButton(
+                                text = "Moderadamente en Desacuerdo",
+                                callback_data = (str(actual_question + 1) + "_2"))],
 
-                            [InlineKeyboardButton(
-                            text = "Moderadamente de Acuerdo",
-                            callback_data = (str(actual_question + 1) + "_3"))],
+                                [InlineKeyboardButton(
+                                text = "Moderadamente de Acuerdo",
+                                callback_data = (str(actual_question + 1) + "_3"))],
 
-                            [InlineKeyboardButton(
-                            text = "Completamente de Acuerdo",
-                            callback_data = (str(actual_question + 1) + "_4"))]
-                            ]
+                                [InlineKeyboardButton(
+                                text = "Completamente de Acuerdo",
+                                callback_data = (str(actual_question + 1) + "_4"))]
+                                ]
 
-                        update.callback_query.message.reply_text(
-                            text = pull_text,
+                            update.callback_query.message.reply_text(
+                            text = "Pregunta Número " + actual_question + ":\n" + pull_text,
                             reply_markup = InlineKeyboardMarkup(buttons))
 
                     data["Grupos"][group_id]["Pregunta Actual"] = actual_question
+
+                    if(actual_question == 60):
+                        update.callback_query.message.reply_text("Ya han sido enviadas todas las preguntas :) \n" +
+                        "Si desea reiniciarlas por favor toque /reiniciar_preguntas")
 
                 file.seek(0)
                 json.dump(data, file, indent=4)

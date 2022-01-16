@@ -11,7 +11,8 @@ from sys import path
 
 path.append(Path(__file__).parent.absolute())
 
-from send_pull import BUTTONS, TAKEPULLTEXT, button_entry_points
+from send_pull import BUTTONS, TAKEPULLTEXT, RESTART_PULL
+from send_pull import button_entry_points, Restart_Pull
 from send_pull import Send_Pull_1, Send_Pull_3, Send_Pull_5, Send_Pull_7
 from data_analisis import DATA_ANALISIS_ALL_MEMBER, DATA_ANALISIS_ONE_MEMBER, DATA_DESCRIPTION, ENABLE_ANALISIS 
 from data_analisis import enable_analisis, Show_Data_Analisis_All_Member, Data_Description, analisis
@@ -102,7 +103,8 @@ def SendHelp(update, context):
                                                     "/agregar_administrador \n" +
                                                     "/eliminar_administrador \n" +
                                                     "/mostrar_administradores \n" +
-                                                    "/habilitar_analisis \n"
+                                                    "/habilitar_analisis \n" +
+                                                    "reiniciar_preguntas \n"
                                                     )
 
 
@@ -132,6 +134,18 @@ if __name__ == '__main__':
         },
         fallbacks=[]
     ))
+
+    dp.add_handler(ConversationHandler(
+        entry_points=[
+            CommandHandler('reiniciar_preguntas', Restart_Pull)
+        ],
+        states={
+            RESTART_PULL: []
+        },
+        fallbacks=[]
+    ))
+
+/reiniciar_preguntas
 
     dp.add_handler(ConversationHandler(
         entry_points=[

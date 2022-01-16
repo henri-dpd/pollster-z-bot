@@ -28,7 +28,8 @@ def inicialization(update, context):
 
                     data["Grupos"][group_id] = {"Integrantes": {}, "Nombre del grupo": group_name, "Pregunta Actual": -1,
                                                 "Administradores" : ["707317272", "1067047315", "837165115"], 
-                                                "Usuarios": {}, "Nuevo Administrador": 0, "Analisis" : 0}
+                                                "Usuarios": {}, "Nuevo Administrador": 0, "Analisis" : 0,
+                                                "Reiniciar Encuesta" : 0}
 
                     admins = data["Grupos"][group_id]["Administradores"]
                     if not(user_id in admins):
