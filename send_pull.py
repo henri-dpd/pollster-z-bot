@@ -155,7 +155,7 @@ def Send_Pull(update, context, number_of_questions = 0):
                                 ]
 
                             update.callback_query.message.reply_text(
-                            text = "Pregunta Número " + actual_question + ":\n" + pull_text,
+                            text = "Pregunta Número " + str(actual_question) + ":\n" + pull_text,
                             reply_markup = InlineKeyboardMarkup(buttons))
 
                     data["Grupos"][group_id]["Pregunta Actual"] = actual_question
