@@ -34,7 +34,7 @@ def Restart_Pull(update, context):
                     
                     actual_question = data["Grupos"][group_id]["Pregunta Actual"]
 
-                    if(actual_question == 60):
+                    if(actual_question == 59):
                         data["Grupos"][group_id]["Pregunta Actual"] = 0
                         update.message.reply_text("Encuesta reiniciada :)")
                     else:
@@ -155,12 +155,12 @@ def Send_Pull(update, context, number_of_questions = 0):
                                 ]
 
                             update.callback_query.message.reply_text(
-                            text = "Pregunta Número " + str(actual_question) + ":\n" + pull_text,
+                            text = "Pregunta Número " + str(actual_question + 1) + ":\n" + pull_text,
                             reply_markup = InlineKeyboardMarkup(buttons))
 
                     data["Grupos"][group_id]["Pregunta Actual"] = actual_question
 
-                    if(actual_question == 60):
+                    if(actual_question == 59):
                         update.callback_query.message.reply_text("Ya han sido enviadas todas las preguntas :) \n" +
                         "Si desea reiniciarlas por favor toque /reiniciar_preguntas")
 
