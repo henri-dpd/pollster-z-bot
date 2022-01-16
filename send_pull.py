@@ -37,7 +37,7 @@ def Restart_Pull(update, context):
                     if(actual_question == 60):
                         data["Grupos"][group_id]["Pregunta Actual"] = 0
                         update.message.reply_text("Encuesta reiniciada :)")
-                    else
+                    else:
                         if(data["Grupos"][group_id]["Reiniciar Encuesta"] == 0):
                             data["Grupos"][group_id]["Reiniciar Encuesta"] = 1
                             update.message.reply_text("Todas las preguntas no han sido mostradas, \n" +

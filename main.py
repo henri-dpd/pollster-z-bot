@@ -145,7 +145,6 @@ if __name__ == '__main__':
         fallbacks=[]
     ))
 
-/reiniciar_preguntas
 
     dp.add_handler(ConversationHandler(
         entry_points=[
