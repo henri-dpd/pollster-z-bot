@@ -104,7 +104,7 @@ def SendHelp(update, context):
                                                     "/eliminar_administrador \n" +
                                                     "/mostrar_administradores \n" +
                                                     "/habilitar_analisis \n" +
-                                                    "reiniciar_preguntas \n"
+                                                    "/reiniciar_preguntas \n"
                                                     )
 
 
