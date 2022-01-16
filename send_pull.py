@@ -132,7 +132,7 @@ def Send_Pull(update, context, number_of_questions = 0):
                     for i in range(number_of_questions):
 
 
-                        if(actual_question < 60):
+                        if(actual_question < 59):
                             actual_question = actual_question + 1   
                         
                             pull_text = questions[actual_question]["Pregunta"] +"\n\n"
