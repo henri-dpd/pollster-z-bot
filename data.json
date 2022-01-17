@@ -32,7 +32,12 @@
                     "12": 4,
                     "13": 4,
                     "14": 4,
-                    "15": 4
+                    "15": 4,
+                    "16": 4,
+                    "17": 3,
+                    "18": 1,
+                    "19": 1,
+                    "20": 4
                 },
                 "707317272": {
                     "Usuario": "ale_esc",
@@ -40,7 +45,7 @@
                 }
             },
             "Nombre del grupo": "Badabun tissss",
-            "Pregunta Actual": 14,
+            "Pregunta Actual": 7,
             "Administradores": [
                 "707317272",
                 "1067047315",
@@ -88,7 +93,22 @@
                     "28": 3,
                     "29": 4,
                     "30": 3,
-                    "31": 3
+                    "31": 3,
+                    "46": 3,
+                    "47": 4,
+                    "48": 2,
+                    "49": 2,
+                    "50": 3,
+                    "51": 2,
+                    "52": 3,
+                    "53": 3,
+                    "54": 3,
+                    "55": 4,
+                    "56": 4,
+                    "57": 3,
+                    "58": 3,
+                    "59": 2,
+                    "60": 2
                 },
                 "814696382": {
                     "Usuario": "i_am_a_teapot_E418",
@@ -126,7 +146,22 @@
                     "35": 3,
                     "36": 3,
                     "37": 2,
-                    "38": 3
+                    "38": 3,
+                    "46": 3,
+                    "47": 2,
+                    "48": 2,
+                    "49": 3,
+                    "50": 3,
+                    "51": 2,
+                    "52": 2,
+                    "53": 3,
+                    "54": 2,
+                    "55": 3,
+                    "56": 3,
+                    "57": 4,
+                    "58": 4,
+                    "59": 3,
+                    "60": 2
                 },
                 "707875418": {
                     "Usuario": "rocioog",
@@ -155,7 +190,8 @@
                     "28": 3,
                     "27": 1,
                     "26": 2,
-                    "25": 4
+                    "25": 4,
+                    "1": 3
                 },
                 "922006984": {
                     "Usuario": "alejbv",
@@ -185,14 +221,15 @@
                 }
             },
             "Nombre del grupo": "MatCom 3roCC(Offtopic)",
-            "Pregunta Actual": 44,
+            "Pregunta Actual": 0,
             "Administradores": [
                 "707317272",
                 "1067047315",
-                "837165115"
+                "837165115",
+                "707317272"
             ],
             "Usuarios": {
-                "ale_esc": -1
+                "ale_esc": "707317272"
             },
             "Nuevo Administrador": 0,
             "Analisis": 0,
@@ -208,11 +245,26 @@
                     "4": 4,
                     "5": 2,
                     "6": 2,
-                    "7": 1
+                    "7": 1,
+                    "8": 2,
+                    "9": 1,
+                    "10": 1,
+                    "12": 3,
+                    "11": 2,
+                    "13": 3,
+                    "14": 4,
+                    "15": 2,
+                    "16": 1,
+                    "17": 1,
+                    "18": 1,
+                    "19": 1,
+                    "20": 1,
+                    "21": 1,
+                    "22": 3
                 }
             },
             "Nombre del grupo": "Proyecto Matem\u00e1tica Aplicada \ud83d\udd90\ufe0f\u270c\ufe0f",
-            "Pregunta Actual": 6,
+            "Pregunta Actual": 27,
             "Administradores": [
                 "707317272",
                 "1067047315",
@@ -228,8 +280,8 @@
         }
     },
     "Analisis_Para_Administradores": {
-        "707317272": "-1001590021784",
-        "1067047315": "-1001590021784",
+        "707317272": "-1001178327031",
+        "1067047315": "-1001178327031",
         "837165115": "-677772752",
         "823911446": "-1001590021784"
     },
@@ -253,8 +305,8 @@
             }
         },
         "-677772752": {
-            "descripcion": "{\"Nombre\":{\"0\":\"hnadie\",\"1\":\"ale_esc\"},\"Alegria\":{\"0\":20.0,\"1\":2.0},\"Porcentaje Alegria\":{\"0\":25.0,\"1\":2.5},\"Media Alegria\":{\"0\":4.0,\"1\":2.0},\"Mal humor\":{\"0\":16.0,\"1\":0.0},\"Porcentaje Mal humor\":{\"0\":20.0,\"1\":0.0},\"Media Mal humor\":{\"0\":4.0,\"1\":null},\"Seriedad\":{\"0\":24.0,\"1\":0.0},\"Porcentaje Seriedad\":{\"0\":30.0,\"1\":0.0},\"Media Seriedad\":{\"0\":4.0,\"1\":null},\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":{\"0\":4.0,\"1\":null},\"Bajo umbral para la risa y sonrisa.\":{\"0\":4.0,\"1\":null},\"Estilo de comunicacion sobrio.\":{\"0\":4.0,\"1\":null},\"Estilo de interaccion alegre\":{\"0\":null,\"1\":null},\"Irritabilidad en situaciones alegres.\":{\"0\":null,\"1\":null},\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":{\"0\":null,\"1\":null},\"Preferir actividades concretas y racionales\":{\"0\":4.0,\"1\":null},\"Prevalencia de animo alegre.\":{\"0\":4.0,\"1\":null},\"Prevalencia de estados serios.\":{\"0\":4.0,\"1\":null},\"Prevalencia de mal humor\":{\"0\":null,\"1\":null},\"Prevalencia de tristeza\":{\"0\":4.0,\"1\":null},\"Sentimientos de irritabilidad.\":{\"0\":4.0,\"1\":null},\"Tristeza en situaciones alegres.\":{\"0\":null,\"1\":null},\"Vision positiva de las circunstancias adversas de la vida.\":{\"0\":4.0,\"1\":2.0},\"Vivir en torno a metas.\":{\"0\":4.0,\"1\":null}}",
-            "resultado": "{\"Alegria\":11.0,\"Porcentaje Alegria\":13.75,\"Media Alegria\":3.0,\"Mal humor\":8.0,\"Porcentaje Mal humor\":10.0,\"Media Mal humor\":2.0,\"Seriedad\":12.0,\"Porcentaje Seriedad\":15.0,\"Media Seriedad\":2.0,\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":2.0,\"Bajo umbral para la risa y sonrisa.\":2.0,\"Estilo de comunicacion sobrio.\":2.0,\"Estilo de interaccion alegre\":0.0,\"Irritabilidad en situaciones alegres.\":0.0,\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":0.0,\"Preferir actividades concretas y racionales\":2.0,\"Prevalencia de animo alegre.\":2.0,\"Prevalencia de estados serios.\":2.0,\"Prevalencia de mal humor\":0.0,\"Prevalencia de tristeza\":2.0,\"Sentimientos de irritabilidad.\":2.0,\"Tristeza en situaciones alegres.\":0.0,\"Vision positiva de las circunstancias adversas de la vida.\":3.0,\"Vivir en torno a metas.\":2.0}",
+            "descripcion": "{\"Nombre\":{\"0\":\"hnadie\",\"1\":\"ale_esc\"},\"Alegria\":{\"0\":21.0,\"1\":2.0},\"Porcentaje Alegria\":{\"0\":26.25,\"1\":2.5},\"Media Alegria\":{\"0\":3.5,\"1\":2.0},\"Mal humor\":{\"0\":24.0,\"1\":0.0},\"Porcentaje Mal humor\":{\"0\":30.0,\"1\":0.0},\"Media Mal humor\":{\"0\":4.0,\"1\":null},\"Seriedad\":{\"0\":28.0,\"1\":0.0},\"Porcentaje Seriedad\":{\"0\":35.0,\"1\":0.0},\"Media Seriedad\":{\"0\":3.5,\"1\":null},\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":{\"0\":4.0,\"1\":null},\"Bajo umbral para la risa y sonrisa.\":{\"0\":4.0,\"1\":null},\"Estilo de comunicacion sobrio.\":{\"0\":4.0,\"1\":null},\"Estilo de interaccion alegre\":{\"0\":null,\"1\":null},\"Irritabilidad en situaciones alegres.\":{\"0\":null,\"1\":null},\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":{\"0\":3.0,\"1\":null},\"Preferir actividades concretas y racionales\":{\"0\":2.5,\"1\":null},\"Prevalencia de animo alegre.\":{\"0\":2.5,\"1\":null},\"Prevalencia de estados serios.\":{\"0\":4.0,\"1\":null},\"Prevalencia de mal humor\":{\"0\":null,\"1\":null},\"Prevalencia de tristeza\":{\"0\":4.0,\"1\":null},\"Sentimientos de irritabilidad.\":{\"0\":4.0,\"1\":null},\"Tristeza en situaciones alegres.\":{\"0\":4.0,\"1\":null},\"Vision positiva de las circunstancias adversas de la vida.\":{\"0\":4.0,\"1\":2.0},\"Vivir en torno a metas.\":{\"0\":4.0,\"1\":null}}",
+            "resultado": "{\"Alegria\":11.5,\"Porcentaje Alegria\":14.375,\"Media Alegria\":2.75,\"Mal humor\":12.0,\"Porcentaje Mal humor\":15.0,\"Media Mal humor\":2.0,\"Seriedad\":14.0,\"Porcentaje Seriedad\":17.5,\"Media Seriedad\":1.75,\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":2.0,\"Bajo umbral para la risa y sonrisa.\":2.0,\"Estilo de comunicacion sobrio.\":2.0,\"Estilo de interaccion alegre\":0.0,\"Irritabilidad en situaciones alegres.\":0.0,\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":1.5,\"Preferir actividades concretas y racionales\":1.25,\"Prevalencia de animo alegre.\":1.25,\"Prevalencia de estados serios.\":2.0,\"Prevalencia de mal humor\":0.0,\"Prevalencia de tristeza\":2.0,\"Sentimientos de irritabilidad.\":2.0,\"Tristeza en situaciones alegres.\":2.0,\"Vision positiva de las circunstancias adversas de la vida.\":3.0,\"Vivir en torno a metas.\":2.0}",
             "moda": {
                 "Alegria": {
                     "valor": 2.0,
@@ -285,6 +337,24 @@
                 "Mal humor": {
                     "valor": 2.0,
                     "porcentaje": 100.0
+                }
+            }
+        },
+        "-1001178327031": {
+            "descripcion": "{\"Nombre\":{\"0\":\"Unshaped_Whisper\",\"1\":\"hnadie\",\"2\":\"i_am_a_teapot_E418\",\"3\":\"Sangre_Roja\",\"4\":\"rocioog\",\"5\":\"Chains99\",\"6\":\"omaro43\",\"7\":\"ale_esc\",\"8\":\"alejbv\",\"9\":\"jmv21\",\"10\":\"jrr00\"},\"Alegria\":{\"0\":6.0,\"1\":35.0,\"2\":0.0,\"3\":34.0,\"4\":7.0,\"5\":7.0,\"6\":1.0,\"7\":11.0,\"8\":3.0,\"9\":6.0,\"10\":3.0},\"Porcentaje Alegria\":{\"0\":7.5,\"1\":43.75,\"2\":0.0,\"3\":42.5,\"4\":8.75,\"5\":8.75,\"6\":1.25,\"7\":13.75,\"8\":3.75,\"9\":7.5,\"10\":3.75},\"Media Alegria\":{\"0\":3.0,\"1\":2.9166666667,\"2\":null,\"3\":2.4285714286,\"4\":3.5,\"5\":3.5,\"6\":1.0,\"7\":2.75,\"8\":3.0,\"9\":3.0,\"10\":1.5},\"Mal humor\":{\"0\":5.0,\"1\":37.0,\"2\":1.0,\"3\":41.0,\"4\":3.0,\"5\":3.0,\"6\":0.0,\"7\":8.0,\"8\":4.0,\"9\":4.0,\"10\":6.0},\"Porcentaje Mal humor\":{\"0\":6.25,\"1\":46.25,\"2\":1.25,\"3\":51.25,\"4\":3.75,\"5\":3.75,\"6\":0.0,\"7\":10.0,\"8\":5.0,\"9\":5.0,\"10\":7.5},\"Media Mal humor\":{\"0\":2.5,\"1\":3.0833333333,\"2\":1.0,\"3\":2.9285714286,\"4\":3.0,\"5\":3.0,\"6\":null,\"7\":2.6666666667,\"8\":4.0,\"9\":2.0,\"10\":3.0},\"Seriedad\":{\"0\":8.0,\"1\":38.0,\"2\":0.0,\"3\":47.0,\"4\":4.0,\"5\":6.0,\"6\":0.0,\"7\":1.0,\"8\":4.0,\"9\":8.0,\"10\":10.0},\"Porcentaje Seriedad\":{\"0\":10.0,\"1\":47.5,\"2\":0.0,\"3\":58.75,\"4\":5.0,\"5\":7.5,\"6\":0.0,\"7\":1.25,\"8\":5.0,\"9\":10.0,\"10\":12.5},\"Media Seriedad\":{\"0\":2.6666666667,\"1\":2.7142857143,\"2\":null,\"3\":2.7647058824,\"4\":4.0,\"5\":3.0,\"6\":null,\"7\":1.0,\"8\":4.0,\"9\":2.6666666667,\"10\":3.3333333333},\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":{\"0\":null,\"1\":2.5,\"2\":null,\"3\":2.0,\"4\":4.0,\"5\":3.0,\"6\":null,\"7\":4.0,\"8\":3.0,\"9\":3.0,\"10\":1.0},\"Bajo umbral para la risa y sonrisa.\":{\"0\":null,\"1\":3.5,\"2\":null,\"3\":2.0,\"4\":null,\"5\":null,\"6\":null,\"7\":1.0,\"8\":null,\"9\":null,\"10\":null},\"Estilo de comunicacion sobrio.\":{\"0\":null,\"1\":3.0,\"2\":null,\"3\":2.75,\"4\":null,\"5\":null,\"6\":null,\"7\":null,\"8\":null,\"9\":2.0,\"10\":3.0},\"Estilo de interaccion alegre\":{\"0\":null,\"1\":3.5,\"2\":null,\"3\":3.5,\"4\":null,\"5\":null,\"6\":null,\"7\":null,\"8\":null,\"9\":null,\"10\":null},\"Irritabilidad en situaciones alegres.\":{\"0\":null,\"1\":null,\"2\":null,\"3\":null,\"4\":null,\"5\":null,\"6\":null,\"7\":null,\"8\":null,\"9\":null,\"10\":null},\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":{\"0\":null,\"1\":2.0,\"2\":null,\"3\":2.5,\"4\":null,\"5\":3.0,\"6\":null,\"7\":1.0,\"8\":4.0,\"9\":4.0,\"10\":4.0},\"Preferir actividades concretas y racionales\":{\"0\":1.0,\"1\":3.0,\"2\":null,\"3\":2.5,\"4\":null,\"5\":null,\"6\":null,\"7\":null,\"8\":null,\"9\":null,\"10\":null},\"Prevalencia de animo alegre.\":{\"0\":2.0,\"1\":2.0,\"2\":null,\"3\":2.6666666667,\"4\":null,\"5\":null,\"6\":null,\"7\":3.0,\"8\":null,\"9\":null,\"10\":null},\"Prevalencia de estados serios.\":{\"0\":3.5,\"1\":3.3333333333,\"2\":null,\"3\":3.0,\"4\":4.0,\"5\":3.0,\"6\":null,\"7\":null,\"8\":null,\"9\":2.0,\"10\":3.0},\"Prevalencia de mal humor\":{\"0\":null,\"1\":3.0,\"2\":null,\"3\":3.0,\"4\":null,\"5\":null,\"6\":null,\"7\":3.0,\"8\":null,\"9\":2.0,\"10\":3.0},\"Prevalencia de tristeza\":{\"0\":3.0,\"1\":3.4,\"2\":1.0,\"3\":3.0,\"4\":null,\"5\":null,\"6\":null,\"7\":3.0,\"8\":null,\"9\":null,\"10\":null},\"Sentimientos de irritabilidad.\":{\"0\":2.0,\"1\":2.5,\"2\":null,\"3\":3.0,\"4\":3.0,\"5\":3.0,\"6\":null,\"7\":2.0,\"8\":4.0,\"9\":null,\"10\":null},\"Tristeza en situaciones alegres.\":{\"0\":null,\"1\":4.0,\"2\":null,\"3\":2.0,\"4\":null,\"5\":null,\"6\":null,\"7\":null,\"8\":null,\"9\":null,\"10\":null},\"Vision positiva de las circunstancias adversas de la vida.\":{\"0\":4.0,\"1\":3.3333333333,\"2\":null,\"3\":2.25,\"4\":3.0,\"5\":4.0,\"6\":1.0,\"7\":3.0,\"8\":null,\"9\":3.0,\"10\":2.0},\"Vivir en torno a metas.\":{\"0\":null,\"1\":2.3333333333,\"2\":null,\"3\":3.0,\"4\":null,\"5\":null,\"6\":null,\"7\":null,\"8\":null,\"9\":null,\"10\":null}}",
+            "resultado": "{\"Alegria\":10.2727272727,\"Porcentaje Alegria\":12.8409090909,\"Media Alegria\":2.4177489177,\"Mal humor\":10.1818181818,\"Porcentaje Mal humor\":12.7272727273,\"Media Mal humor\":2.4707792208,\"Seriedad\":11.4545454545,\"Porcentaje Seriedad\":14.3181818182,\"Media Seriedad\":2.3768780239,\"Amplio rango de desencadenadores de alegria, risa y sonrisa\":2.0454545455,\"Bajo umbral para la risa y sonrisa.\":0.5909090909,\"Estilo de comunicacion sobrio.\":0.9772727273,\"Estilo de interaccion alegre\":0.6363636364,\"Irritabilidad en situaciones alegres.\":0.0,\"Percepcion de que los eventos de la vida diaria son serios e importantes.\":1.8636363636,\"Preferir actividades concretas y racionales\":0.5909090909,\"Prevalencia de animo alegre.\":0.8787878788,\"Prevalencia de estados serios.\":1.9848484848,\"Prevalencia de mal humor\":1.2727272727,\"Prevalencia de tristeza\":1.2181818182,\"Sentimientos de irritabilidad.\":1.7727272727,\"Tristeza en situaciones alegres.\":0.5454545455,\"Vision positiva de las circunstancias adversas de la vida.\":2.3257575758,\"Vivir en torno a metas.\":0.4848484848}",
+            "moda": {
+                "Alegria": {
+                    "valor": 3.0,
+                    "porcentaje": 50.0
+                },
+                "Seriedad": {
+                    "valor": 3.0,
+                    "porcentaje": 66.66666666666666
+                },
+                "Mal humor": {
+                    "valor": 3.0,
+                    "porcentaje": 60.0
                 }
             }
         }

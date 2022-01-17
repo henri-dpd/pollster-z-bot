@@ -46,7 +46,9 @@ def start(update, context):
 
 
                 if(user_id in data["Grupos"][group_id]["Administradores"]):
-                    update.message.reply_text("Hola soy un bot capaz de medir el humor del grupo a partir de una serie de encuestas.")
+                    actual_question = str(data["Grupos"][group_id]["Pregunta_Actual"]+1)
+                    update.message.reply_text("Hola soy un bot capaz de medir el humor del grupo a partir de una serie de encuestas. \n Han sido lanzadas " 
+                                              + actual_question + " preguntas.")
                     Show_Pull_Buttons(update, context)
             else:
                 update.message.reply_text("El bot no ha sido iniciado, por favor, toque: \n /iniciar_bot")
