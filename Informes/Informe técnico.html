@@ -266,8 +266,8 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="integrantes">Integrantes:</h3>
 
 <ul>
-<li>Airelys Collazo P&#xE9;rez</li>
-<li>Alejandro Escobar Giraudy</li>
+<li>Airelys Collazo P&#xE9;rez C312</li>
+<li>Alejandro Escobar Giraudy C312</li>
 <li>Henri Daniel Pe&#xF1;a Dequero C311</li>
 </ul>
 <h2 class="mume-header" id="pollster-z-bot"><em>Pollster Z Bot</em></h2>
@@ -276,14 +276,14 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h4 class="mume-header" id="requerimientos-t%C3%A9cnicos">Requerimientos t&#xE9;cnicos</h4>
 
-<p>Se va a ejecutar en un servidor con acceso a internet todo el tiempo, con persistencia de datos y una capacidad de al menos 100mb como por ejemplo puede ser pythonanywhere, necesario para el despliegue del bot y los usuarios finales pueden darle uso en telegram por lo que solo necesitan un dispositivo que soporte la aplicaci&#xF3;n.</p>
+<p>Se va a ejecutar en un servidor con acceso a internet todo el tiempo, con persistencia de datos y una capacidad de al menos 100mb como por ejemplo puede ser <em>pythonanywhere</em>, necesario para el despliegue del bot y los usuarios finales pueden darle uso en Telegram por lo que solo necesitan un dispositivo que soporte la aplicaci&#xF3;n.</p>
 <h4 class="mume-header" id="requerimientos-de-software">Requerimientos de software</h4>
 
-<p>Es necesario tener instalado python 3.7 o superior, adem&#xE1;s de las librer&#xED;as python-telegram-bot, pandas y numpy en el servidor, para el usuario final basta tener instalado la aplicaci&#xF3;n Telegram.</p>
+<p>Es necesario tener instalado <em>python</em> 3.7 o superior, adem&#xE1;s de las librer&#xED;as <em>python-telegram-bot</em>, <em>pandas</em> y <em>numpy</em> en el servidor, para el usuario final basta tener instalado la aplicaci&#xF3;n Telegram.</p>
 <h4 class="mume-header" id="objetivo-general">Objetivo general:</h4>
 
 <ul>
-<li>Dise&#xF1;ar un bot de telegram capaz de hacer encuestas en los grupos y hacer un an&#xE1;lisis descriptivo sobre los resultados para medir el sentido del humor.</li>
+<li>Dise&#xF1;ar un bot de Telegram capaz de hacer encuestas en los grupos y hacer un an&#xE1;lisis descriptivo sobre los resultados para medir el sentido del humor.</li>
 </ul>
 <h4 class="mume-header" id="objetivos-espec%C3%ADficos">Objetivos espec&#xED;ficos:</h4>
 
@@ -296,10 +296,10 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <h4 class="mume-header" id="resumen">Resumen</h4>
 
-<p>El Pollster Z Bot fue dise&#xF1;ado sobre la base de ser una aplicaci&#xF3;n que corra perpetuamente en internet, brindando los servicios de encuestas y an&#xE1;lisis de datos de las mismas a partir de los integrantes de un grupo de telegram. Para ello fue utilizado el Lenguaje Python con la biblioteca python-telegran-bot, pandas y numpy, as&#xED; como git para la gesti&#xF3;n de versiones y desarrollo de la aplicaci&#xF3;n, adem&#xE1;s desplegada en pythonanywhere.</p>
+<p>El <em><strong>Pollster Z Bot</strong></em> fue dise&#xF1;ado sobre la base de ser una aplicaci&#xF3;n que corra perpetuamente en internet, brindando los servicios de encuestas y an&#xE1;lisis de datos de las mismas a partir de los integrantes de un grupo de Telegram. Para ello fue utilizado el Lenguaje Python con la biblioteca <em>python-telegran-bot</em>, <em>pandas</em> y <em>numpy</em>, as&#xED; como <em>git</em> para la gesti&#xF3;n de versiones y desarrollo de la aplicaci&#xF3;n, adem&#xE1;s desplegada en <em>pythonanywhere</em>.</p>
 <h4 class="mume-header" id="dise%C3%B1o-de-la-aplicaci%C3%B3n">Dise&#xF1;o de la aplicaci&#xF3;n</h4>
 
-<p>El proyecto en general est&#xE1; conformado por 4 archivos .py, donde se almacena el c&#xF3;digo, 1 archivo json, donde se guardan todos los datos acerca de las preguntas de las encuestas y de los datos que se recogen de los diferentes grupos,  una carpeta que contiene los CSV que ser&#xE1;n enviados, otra que contiene los notebooks y CSV que explican el funcionamiento del an&#xE1;lisis de datos, y por &#xFA;ltimo algunos txt utiles para la instalacion y despliegue en otras plataformas donde estar&#xE0; corriendo el c&#xF3;digo como puede ser heroku, o pythonanywhere.</p>
+<p>El proyecto en general est&#xE1; conformado por 4 archivos <em>.py</em>, donde se almacena el c&#xF3;digo, 1 archivo json, donde se guardan todos los datos acerca de las preguntas de las encuestas y de los datos que se recogen de los diferentes grupos,  una carpeta que contiene los CSV que ser&#xE1;n enviados, otra que contiene los notebooks y CSV que explican el funcionamiento del an&#xE1;lisis de datos, y por &#xFA;ltimo algunos <em>txt</em> &#xFA;tiles para la instalaci&#xF3;n y despliegue en otras plataformas donde estar&#xE1; corriendo el c&#xF3;digo como puede ser <em>heroku</em>, o <em>pythonanywhere</em>.</p>
 <h4 class="mume-header" id="diccionario-de-datos">Diccionario de datos</h4>
 
 <p>Comencemos explicando c&#xF3;mo se guardan los datos en el json.<br>
@@ -322,64 +322,64 @@ La estructura de Grupos es:</p>
     <span class="token property">&quot;Analisis&quot;</span> <span class="token operator">:</span> int<span class="token punctuation">,</span>
     <span class="token property">&quot;Reiniciar Encuesta&quot;</span> <span class="token operator">:</span> int
 <span class="token punctuation">}</span>
-</pre><p>Donde &quot;Integrantes&quot; es un diccionario, cuyas llaves son los id de los usuarios que hayan respondido preguntas del bot, y de estos estudiantes guarda en un diccionario, su username de telegram (mediante la llave &quot;Usuario&quot;), y dado un n&#xFA;mero como llave, la respuesta que ha dado en las encuestas a la pregunta que coincide con ese n&#xFA;mero.<br>
-&quot;Nombre del Grupo&quot; representa el nombre del grupo de telegram correspondiente al id, &quot;Pregunta Actual&quot; es un entero que representa la pregunta que debemos enviar a continuaci&#xF3;n, Administradores es un lista que contiene los id de todos los administradores del bot en este grupo, Usuarios es un diccionario que, dado un username, devuelve el id de ese usuario, &quot;Nuevo Administrador&quot; es un string que ayuda al bot a agregar un nuevo administrador a ese grupo usando el id, &quot;Analisis&quot; y &quot;Reiniciar Encuesta&quot; son contadores que sirven para algunas de las funcionalidades del Bot.<br>
-Regresando a la estructura principal del Json, tenemos &quot;Analisis_Para_Administradores&quot;, que dado un id de un administrador de un grupo en el que el bot est&#xE9; activo, devuelve el id que identifica el grupo al que &#xE9;l puede acceder a sus datos a partir de los CSV.<br>
-&quot;Resultados&quot;, que es un diccionario que tiene por llaves los id de los grupos y valor otro diccionario que contiene los resultados del ultimo analisi ejecutado, hay 3 resultados: &quot;descripcion&quot; que tiene nombre, sumatoria por categor&#xED;a, porcentaje por categor&#xED;a, media por categor&#xED;a para cada persona que respondio al menos una encuesta; &quot;resultado&quot; que tiene de forma general para todo el grupo en que promedio de sumatoria, porcentaje, media por categoria y sumatoria por subcategor&#xED;a; moda contiene por categor&#xED;a el valor que m&#xE1;s se repite y en que porcentaje. Tenga en consideraci&#xF3;n que las respuestas de las encuestas se traducen a valores enteros entre 1 y 4.<br>
-Y por &#xFA;ltimo &quot;Preguntas&quot;, que es una lista de diccionarios que representan cada una de las preguntas, todos estos tienen por llaves &quot;Pregunta&quot;, que es el enunciado de la pregunta, &quot;NumeroPregunta&quot;, que es el &#xED;ndice de la pregunta, &quot;IndiceSubcategoria&quot;, que representa el &#xED;ndice subcategor&#xED;a a la que pertenece la pregunta, &quot;Subcategoria&quot;, la subcategor&#xED;a a la que pertenece la pregunta, y &quot;Categoria&quot;, que es la categor&#xED;a a la que pertenece la pregunta, para cada categor&#xED;a se tiene varias subcategor&#xED;as y por cada subcategor&#xED;a se tiene varias preguntas, pero en general con 20 preguntas pro categor&#xED;a.</p>
+</pre><p>Donde &quot;Integrantes&quot; es un diccionario, cuyas llaves son los id de los usuarios que hayan respondido preguntas del bot, y de estos estudiantes guarda en un diccionario, su username de Telegram (mediante la llave &quot;Usuario&quot;), y dado un n&#xFA;mero como llave, la respuesta que ha dado en las encuestas a la pregunta que coincide con ese n&#xFA;mero.<br>
+&quot;Nombre del Grupo&quot; representa el nombre del grupo de telegram correspondiente al id, &quot;Pregunta Actual&quot; es un entero que representa la pregunta que debemos enviar a continuaci&#xF3;n, Administradores es un lista que contiene los id de todos los administradores del bot en este grupo, Usuarios es un diccionario que, dado un username, devuelve el id de ese usuario, &quot;Nuevo Administrador&quot; es un string que ayuda al bot a agregar un nuevo administrador a ese grupo usando el id, &quot;Analisis&quot; y &quot;Reiniciar Encuesta&quot; son contadores que sirven para algunas de las funcionalidades del bot.<br>
+Regresando a la estructura principal del json, tenemos &quot;Analisis_Para_Administradores&quot;, que dado un id de un administrador de un grupo en el que el bot est&#xE9; activo, devuelve el id que identifica el grupo al que &#xE9;l puede acceder a sus datos a partir de los CSV.<br>
+&quot;Resultados&quot;, que es un diccionario que tiene por llaves los id de los grupos y valor otro diccionario que contiene los resultados del &#xFA;ltimo an&#xE1;lisis ejecutado, hay 3 resultados: &quot;descripcion&quot; que tiene nombre, sumatoria por categor&#xED;a, porcentaje por categor&#xED;a, media por categor&#xED;a para cada persona que respondi&#xF3; al menos una encuesta; &quot;resultado&quot; que tiene de forma general para todo el grupo en que promedio de sumatoria, porcentaje, media por categor&#xED;a y sumatoria por subcategor&#xED;a; moda contiene por categor&#xED;a el valor que m&#xE1;s se repite y en que porcentaje. Tenga en consideraci&#xF3;n que las respuestas de las encuestas se traducen a valores enteros entre 1 y 4.<br>
+Y por &#xFA;ltimo &quot;Preguntas&quot;, que es una lista de diccionarios que representan cada una de las preguntas, todos estos tienen por llaves &quot;Pregunta&quot;, que es el enunciado de la pregunta, &quot;NumeroPregunta&quot;, que es el &#xED;ndice de la pregunta, &quot;IndiceSubcategoria&quot;, que representa el &#xED;ndice subcategor&#xED;a a la que pertenece la pregunta, &quot;Subcategoria&quot;, la subcategor&#xED;a a la que pertenece la pregunta, y &quot;Categoria&quot;, que es la categor&#xED;a a la que pertenece la pregunta, para cada categor&#xED;a se tiene varias subcategor&#xED;as y por cada subcategor&#xED;a se tiene varias preguntas, pero en general con 20 preguntas por categor&#xED;a.</p>
 <h4 class="mume-header" id="esquema-de-las-clases-definidas">Esquema de las clases definidas</h4>
 
-<p>Una vez explicado la estructura del Json, comenzamos por cada uno de los .py.<br>
+<p>Una vez explicado la estructura del json, comenzamos por cada uno de los .py.<br>
 <a href="http://Main.py">Main.py</a> contiene la estructura del bot en s&#xED;, los botones, comandos y etc. Es el archivo principal que debe ser cargado para que funcione el lenguaje.<br>
-En este se encuentra (al final) el dispatcher que nos permite agregar los comandos y botones, y a continuaci&#xF3;n el cuerpo de los mismos, que se agregan mediante add_handler (que pertenece a python-telegram-bot), siendo esta lista siguiente los comandos:</p>
+En este se encuentra (al final) el <em>dispatcher</em> que nos permite agregar los comandos y botones, y a continuaci&#xF3;n el cuerpo de los mismos, que se agregan mediante <em>add_handler</em> (que pertenece a <em>python-telegram-bot</em>), siendo esta lista siguiente los comandos:</p>
 <ul>
-<li>iniciar_bot</li>
-<li>start</li>
-<li>reiniciar_preguntas</li>
-<li>mostrar_analisis</li>
-<li>habilitar_analisis</li>
-<li>agregar_administrador</li>
-<li>eliminar_administrador</li>
-<li>mostrar_administradores</li>
-<li>ayuda</li>
+<li><em>iniciar_bot</em></li>
+<li><em>start</em></li>
+<li><em>reiniciar_preguntas</em></li>
+<li><em>mostrar_analisis</em></li>
+<li><em>habilitar_analisis</em></li>
+<li><em>agregar_administrador</em></li>
+<li><em>eliminar_administrador</em></li>
+<li><em>mostrar_administradores</em></li>
+<li><em>ayuda</em></li>
 </ul>
 <p>Los botones tienen otras caracter&#xED;sticas y son demasiados puesto que, adem&#xE1;s de los principales, existen 240 solo para las encuestas.<br>
-Ahora explicaremos las funciones que podemos encontrar en todos los .py.<br>
-Estas contienen dos caracter&#xED;sticas similares, siempre que responda a un comando o bot&#xF3;n la entrada ser&#xE1;n dos par&#xE1;metros update y context, que contienen toda la informaci&#xF3;n que nos proporciona telegram acerca de los usuarios que interact&#xFA;an con el bot y el grupo en el que se encuentra (en caso de que se est&#xE9; interactuando con el bot en un grupo claro est&#xE1;), y que se hace al inicio de cada m&#xE9;todo una serie de revisiones.<br>
-Estas revisiones suelen ser del tipo, si el usuario est&#xE1; interactuando con el bot por el privado o a partir de un grupo, si el grupo ya ha sido iniciado (o lo que es lo mismo, si el id del bot se encuentra en la secci&#xF3;n &quot;Grupos&quot; del json), si dado el username del usuario ya fue recogido su id, y si la persona que interact&#xFA;a con el bot es un administrador del mismo en ese grupo.<br>
+Ahora explicaremos las funciones que podemos encontrar en todos los <em>.py</em>.<br>
+Estas contienen dos caracter&#xED;sticas similares, siempre que responda a un comando o bot&#xF3;n la entrada ser&#xE1;n dos par&#xE1;metros <em>update</em> y <em>context</em>, que contienen toda la informaci&#xF3;n que nos proporciona Telegram acerca de los usuarios que interact&#xFA;an con el bot y el grupo en el que se encuentra (en caso de que se est&#xE9; interactuando con el bot en un grupo claro est&#xE1;), y que se hace al inicio de cada m&#xE9;todo una serie de revisiones.<br>
+Estas revisiones suelen ser del tipo, si el usuario est&#xE1; interactuando con el bot por el privado o a partir de un grupo, si el grupo ya ha sido iniciado (o lo que es lo mismo, si el id del bot se encuentra en la secci&#xF3;n &quot;Grupos&quot; del json), si dado el <em>username</em> del usuario ya fue recogido su id, y si la persona que interact&#xFA;a con el bot es un administrador del mismo en ese grupo.<br>
 Aunque hay variaciones en algunos m&#xE9;todos, siempre se tiende a tener la estructura de preguntas anteriormente descrita, as&#xED; que ser&#xE1; com&#xFA;n encontrarse ese c&#xF3;digo al inicio de cada funci&#xF3;n siempre, extrayendo y guardando en variables algunos datos de inter&#xE9;s como el id del usuario y el id del grupo.<br>
-En <a href="http://main.py">main.py</a> tenemos las funciones:</p>
+En <strong><a href="http://main.py">main.py</a></strong> tenemos las funciones:</p>
 <ul>
-<li>start, que despliega los botones que se utilizan para lanzar preguntas al grupo, apoy&#xE1;ndose en el m&#xE9;todo Show_Pull_Buttons</li>
-<li>Show_Analisis_Buttons, que muestra los botones utilizados para devolver los CSV con el an&#xE1;lisis de datos</li>
-<li>SendHelp, que muestra la lista de comandos del Pollster Bot</li>
+<li><em>start</em>, que despliega los botones que se utilizan para lanzar preguntas al grupo, apoy&#xE1;ndose en el m&#xE9;todo <em>Show_Pull_Buttons</em></li>
+<li><em>Show_Analisis_Buttons</em>, que muestra los botones utilizados para devolver los CSV con el an&#xE1;lisis de datos</li>
+<li><em>SendHelp</em>, que muestra la lista de comandos del <em><strong>Pollster Z Bot</strong></em></li>
 </ul>
-<p>Una vez analizado main procedamos al resto de .py<br>
-Assign_administrator.py es el encargado de las funciones que tengan que ver con la decisi&#xF3;n sobre qui&#xE9;n es administrador de cierto grupo. Si bien todos los presentes en el grupo pueden participar en las encuestas, solo los que sean designados como admistradores del grupo pueden utilizar los comandos del mismo, as&#xED; como los botones que no tenga que ver con las encuestas.<br>
+<p>Una vez analizado main procedamos al resto de <em>.py</em><br>
+<strong>Assign_administrator.py</strong> es el encargado de las funciones que tengan que ver con la decisi&#xF3;n sobre qui&#xE9;n es administrador de cierto grupo. Si bien todos los presentes en el grupo pueden participar en las encuestas, solo los que sean designados como administradores del grupo pueden utilizar los comandos del mismo, as&#xED; como los botones que no tenga que ver con las encuestas.<br>
 Aqu&#xED; podemos encontrar los m&#xE9;todos:</p>
 <ul>
-<li>inicialization, que responde a un comando que solo se puede utilizar una vez, y es el primero que debemos utilizar al agregar el bot a un grupo. Este comando agrega el grupo con su informaci&#xF3;n pertinente al json, y designa a la persona que lo use como administrador del bot en el grupo inmediatamente. Ning&#xFA;n otro comando funciona hasta que no hayamos activado este.</li>
-<li>add_administrator y enter_administrator, son dos funciones que permiten agregar un administrador del bot en un grupo, por la din&#xE1;mica de los comandos, al seleccionar el comando correspondiente, se habilita el bot para guardar informaci&#xF3;n de qui&#xE9;n se quiere agregar, add_administrator informa al json de este estado y enter_administrador agrega a la persona a partir de que el bot lea lo que escribe.</li>
-<li>Remove_Administrator y Erase_Administrator, que elimina un administrador del bot en un grupo siguiendo la l&#xF3;gica anterior.</li>
-<li>Show_Administrators, que b&#xE1;sicamente manda un mensaje con una lista de los usernames de los administradores en el grupo actual.</li>
+<li><em>inicialization</em>, que responde a un comando que solo se puede utilizar una vez, y es el primero que debemos utilizar al agregar el bot a un grupo. Este comando agrega el grupo con su informaci&#xF3;n pertinente al json, y designa a la persona que lo use como administrador del bot en el grupo inmediatamente. Ning&#xFA;n otro comando funciona hasta que no hayamos activado este.</li>
+<li><em>add_administrator</em> y <em>enter_administrator</em>, son dos funciones que permiten agregar un administrador del bot en un grupo, por la din&#xE1;mica de los comandos, al seleccionar el comando correspondiente, se habilita el bot para guardar informaci&#xF3;n de qui&#xE9;n se quiere agregar, <em>add_administrator</em> informa al json de este estado y <em>enter_administrador</em> agrega a la persona a partir de que el bot lea lo que escribe.</li>
+<li><em>Remove_Administrator</em> y <em>Erase_Administrator</em>, que elimina un administrador del bot en un grupo siguiendo la l&#xF3;gica anterior.</li>
+<li><em>Show_Administrators</em>, que b&#xE1;sicamente manda un mensaje con una lista de los <em>usernames</em> de los administradores en el grupo actual.</li>
 </ul>
-<p>Send_pull.py es el que contiene las funciones relacionadas con las encuestas.<br>
+<p><strong>Send_pull.py</strong> es el que contiene las funciones relacionadas con las encuestas.<br>
 En este podemos encontrar:</p>
 <ul>
-<li>Restart_Pull, que permite reiniciar las preguntas para que comience a mandarse desde la primera de nuevo<br>
--Pulls_Buttons, es una funci&#xF3;n que responde a los 240 botones de las distintas opciones de las 60 preguntas, recibe en el update cu&#xE1;l es el bot&#xF3;n que fue tocado y a qu&#xE9; pregunta pertenece, para guardar dicha informaci&#xF3;n en el json.</li>
-<li>Add_Pull_Callback_Query_Handler, a&#xF1;ade de forma din&#xE1;mica el c&#xF3;digo de los 240 botones de las preguntas, para luego ser cargado por el dispatcher del main</li>
-<li>Send_Pull, que permite lanzar n preguntas con sus 4 opciones respectivas, esta viene a continuaci&#xF3;n de Send_Pull_1, 3, 5 y 7, que le informan del n&#xFA;mero de preguntas correspondientes a lanzar.</li>
+<li><em>Restart_Pull</em>, que permite reiniciar las preguntas para que comience a mandarse desde la primera de nuevo</li>
+<li><em>Pulls_Buttons</em>, es una funci&#xF3;n que responde a los 240 botones de las distintas opciones de las 60 preguntas, recibe en el <em>update</em> cu&#xE1;l es el bot&#xF3;n que fue tocado y a qu&#xE9; pregunta pertenece, para guardar dicha informaci&#xF3;n en el json.</li>
+<li><em>Add_Pull_Callback_Query_Handler</em>, a&#xF1;ade de forma din&#xE1;mica el c&#xF3;digo de los 240 botones de las preguntas, para luego ser cargado por el <em>dispatcher</em> del <em>main</em></li>
+<li><em>Send_Pull</em>, que permite lanzar n preguntas con sus 4 opciones respectivas, esta viene a continuaci&#xF3;n de <em>Send_Pull_1, 3, 5 y 7</em>, que le informan del n&#xFA;mero de preguntas correspondientes a lanzar.</li>
 </ul>
-<p>Por &#xFA;ltimo tenemos data_analisis.py en donde estan los m&#xE9;todos que calculan el an&#xE1;lisis:<br>
+<p>Por &#xFA;ltimo tenemos <strong>data_analisis.py</strong> en donde est&#xE1;n los m&#xE9;todos que calculan el an&#xE1;lisis:<br>
 Consta de los m&#xE9;todos:</p>
 <ul>
-<li>enable_analisis se ejecuta al lanzar el comando habilitar_analisis permitiendo al usuario acceder al an&#xE1;lisis por el chat privado del bot en donde se env&#xED;a un mensaje de feedback para que sepa que fue ejecutado con &#xE9;xito</li>
-<li>analisis m&#xE9;todo que se ejecuta al lanzar el comando mostrar_analisis, en el mismo se toma los datos del grupo en que se habilt&#xF3; el an&#xE1;lisis y se procesan para guardar en el json &quot;Resultados&quot; los resultados. Para realizar el an&#xE1;lisis se crean dos dataframes(utilizando pandas), df que contiene de columnas Nombre y las preguntas teniendo por fila las respuestas de cada usuario y sub que tiene por columnas Pregunta, NumeroPregunta, IndiceSubcategoria, Subcategoria, Categoria siendo as&#xED; cada fila una pregunta de esta manera conocemos por cada pregunta cu&#xE1;l es su categor&#xED;a y subcategor&#xED;a, teniendo esto se procede al an&#xE1;lisis descriptivo de los datos, se crea un dataframe preproc auxiliar en el que guardaremos los resultados, luego se agrupa preguntas por categor&#xED;a guardando el resultado en categoria, iterando por las categorias procedemos a extraer la sumatoria, porcetaje y media filtrando en la categor&#xED;a por persona y guardando dichas series(columnas en los dataframes) en preproc, usando la misma l&#xF3;gica calculamos la agrupamos y calculamos la sumatoria por subcategor&#xED;a guardando el resultado tambi&#xE9;n en categor&#xED;a, luego se guarda en una variable llamada resultado la sumatoria de las categor&#xED;as de todas las personas guardada en preproc, a continuaci&#xF3;n crea el diccionario de modas por categor&#xED;a asignando como valor por defecto &quot;-&quot; y antes de llenarlo se verifica si existen preguntas respondidas en la categor&#xED;a, una vez terminado y tenemos todos los datos descriptivos por lo tanto preproc, resultado, moda se guardan en data.json en data[&quot;Resultados&quot;][group_id] teniendo como llaves &quot;descripcion&quot;, &quot;resultado&quot;, &quot;moda&quot; respectivamente.</li>
-<li>Show_Data_Analisis_All_Member lee de data.json en data[&quot;Resultados&quot;][group_id][&quot;descripcion&quot;] y se toma las columnas desde &quot;Nombre&quot; hasta &quot;Media Seriedad&quot; y se guarda en &quot;CSV/Resultados en el grupo.csv&quot; para posteriormente enviarlo el mismo al usuario</li>
-<li>Show_Data_Analisis_One_Member envia al usuario un mensaje para indicarle como debe pedir el nombre de la persona de quien va a obtener los datos</li>
-<li>Show_Data_Analisis_One_Member_Enter lee el nombre que le env&#xED;an al bot y lee de data.json en data[&quot;Resultados&quot;][group_id][&quot;descripcion&quot;] devolviendo la fila que tiene por nombre el que el usuario necesita, se guarda en &quot;CSV/Resultados en la persona.csv&quot; y env&#xED;a al usuario.</li>
-<li>Data_Description lee de data.json en data[&quot;Resultados&quot;][group_id][&quot;resultado&quot;] y data[&quot;Resultados&quot;][group_id][&quot;moda&quot;] para luego guardar los datos en un string para luego enviarlo como un mensaje al usuario</li>
+<li><em>enable_analisis</em> se ejecuta al lanzar el comando <em>habilitar_analisis</em> permitiendo al usuario acceder al an&#xE1;lisis por el chat privado del bot en donde se env&#xED;a un mensaje de <em>feedback</em> para que el usuario sepa que fue ejecutado con &#xE9;xito.</li>
+<li><em>analisis</em> m&#xE9;todo que se ejecuta al lanzar el comando <em>mostrar_analisis</em>, en el mismo se toma los datos del grupo en que se habilit&#xF3; el an&#xE1;lisis y se procesan para guardar en el json &quot;Resultados&quot; los resultados. Para realizar el an&#xE1;lisis se crean dos <em>DataFrames</em>(utilizando <em>pandas</em>), <em>df</em> que contiene de columnas <em>Nombre</em> y las preguntas teniendo por fila las respuestas de cada usuario y <em>sub</em> que tiene por columnas <em>Pregunta, NumeroPregunta, IndiceSubcategoria, Subcategoria, Categoria</em> siendo as&#xED; cada fila una pregunta de esta manera conocemos por cada pregunta cu&#xE1;l es su categor&#xED;a y subcategor&#xED;a, teniendo esto se procede al an&#xE1;lisis descriptivo de los datos, se crea un <em>DataFrame</em> <em>preproc</em> auxiliar en el que guardaremos los resultados, luego se agrupa preguntas por categor&#xED;a guardando el resultado en categor&#xED;a, iterando por las categor&#xED;as procedemos a extraer la sumatoria, porcentaje y media filtrando en la categor&#xED;a por persona y guardando dichas series(columnas en los DataFrames) en <em>preproc</em>, usando la misma l&#xF3;gica agrupamos y calculamos la sumatoria por subcategor&#xED;a guardando el resultado tambi&#xE9;n en categor&#xED;a, luego se guarda en una variable llamada resultado la sumatoria de las categor&#xED;as de todas las personas guardada en <em>preproc</em>, a continuaci&#xF3;n crea el diccionario de modas por categor&#xED;a asignando como valor por defecto &quot;-&quot; y antes de llenarlo se verifica si existen preguntas respondidas en la categor&#xED;a, una vez terminado y tenemos todos los datos descriptivos por lo tanto <em>preproc</em>, resultado, moda se guardan en <strong>data.json</strong> en <em>data[&quot;Resultados&quot;][group_id]</em> teniendo como llaves &quot;descripcion&quot;, &quot;resultado&quot;, &quot;moda&quot; respectivamente.</li>
+<li><em>Show_Data_Analisis_All_Member</em> lee de <strong>data.json</strong> en <em>data[&quot;Resultados&quot;][group_id][&quot;descripcion&quot;]</em> y se toma las columnas desde &quot;Nombre&quot; hasta &quot;Media Seriedad&quot; y se guarda en <em>&quot;CSV/Resultados en el grupo.csv&quot;</em> para posteriormente enviarlo el mismo al usuario</li>
+<li><em>Show_Data_Analisis_One_Member</em> env&#xED;a al usuario un mensaje para indicarle como debe pedir el nombre de la persona de quien va a obtener los datos</li>
+<li><em>Show_Data_Analisis_One_Member_Enter</em> lee el nombre que le env&#xED;an al bot y lee de <strong>data.json</strong> en <em>data[&quot;Resultados&quot;][group_id][&quot;descripcion&quot;]</em> devolviendo la fila que tiene por nombre el que el usuario necesita, se guarda en &quot;<em>CSV/Resultados en la persona.csv&quot;</em> y env&#xED;a al usuario.</li>
+<li><em>Data_Description</em> lee de <strong>data.json</strong> en <em>data[&quot;Resultados&quot;][group_id][&quot;resultado&quot;]</em> y <em>data[&quot;Resultados&quot;][group_id][&quot;moda&quot;]</em> para luego guardar los datos en una variable para luego enviarlo como un mensaje al usuario</li>
 </ul>
 <p>De esta forma queda conformado el proyecto, concluimos el actual informe. Gracias por leer.</p>
 
