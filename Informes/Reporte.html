@@ -1,0 +1,397 @@
+<!DOCTYPE html><html><head>
+      <title>Reporte</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Laptop\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="reporte">Reporte</h1>
+
+<h3 class="mume-header" id="integrantes">Integrantes:</h3>
+
+<ul>
+<li>Airelys Collazo P&#xE9;rez C-312</li>
+<li>Alejandro Escobar Giraudy C-312</li>
+<li>Henri Daniel Pe&#xF1;a Dequero C-311</li>
+</ul>
+<h2 class="mume-header" id="pollster-z-bot"><em>Pollster Z Bot</em></h2>
+
+<h3 class="mume-header" id="universidad-de-la-habana-matcom">Universidad de La Habana, MATCOM</h3>
+
+<h4 class="mume-header" id="1-introducci%C3%B3n">1. Introducci&#xF3;n</h4>
+
+<p>Pollster Z Bot es un software que corre perpetuamente en un servidor con acceso a internet, comunic&#xE1;ndose con telegram para ser usado en la aplicaci&#xF3;n con mismo nombre. Este es concebido como soluci&#xF3;n a la problem&#xE1;tica de medir el sentido del humor en un grupo de personas.<br>
+&#xBF;C&#xF3;mo es posible calcular el sentido del humor? Este es un concepto muy abstracto, al consultar con la opini&#xF3;n de psic&#xF3;logos, articulos y dem&#xE1;s se puede llegar a la conclusi&#xF3;n de que directamente es muy complejo evaluarlo dado que el sentido del humor puede ser tan diverso como lo que se defina por sentido del humor(pues que puede ser interpretado de varias maneras), o con respecto a que medidas, o el cambio de acuerdo al grupo social en que se evalue, etc. Consecuencia de estas problem&#xE1;ticas se puede llegar a la soluci&#xF3;n de que no es necesario evaluar directamente el sentido del humor, sino que se puede evaluar otras escalas relacionadas al mismo, como la alegr&#xED;a, seriedad, etc lo que nos lleva a buscar soluci&#xF3;n en una escala multidimensional, como lo es STCI.<br>
+En la modalidad de autoreporte Willibald Ruch en 1994, (Ruch, 1996) desarrolla un instrumento llamado STCI-60 (State Trait Cheerfulness Inventory), el cual contiene tres constructos. Dos sobre estados emocionales (alegr&#xED;a y mal humor) y uno sobre encuadre de la mente (seriedad). Cada uno de ellos puede manifestarse como estado o como rasgo dependiendo si se expresa como una disposici&#xF3;n actual hacia el humor o si  se refiere a una disposici&#xF3;n permanente (rasgo). La escala desarrollada por Ruch eval&#xFA;a el humor como rasgo o disposici&#xF3;n permanente.<br>
+Siendo este el elegido para intentar medir el sentido del humor de una persona, llevado a un grupo se ha de tener en cuenta de que es necesario aplicar individualmente las encuestas y de estos resultados sacar conclusiones para el grupo en general.<br>
+Teniendo la herramienta para evaluar el sentido del humor, &#xBF;C&#xF3;mo la aplicamos? Teniendo en cuenta que los grupos de la facultad se han hecho en Telegram y que el mismo brinda la opci&#xF3;n de crear bots que puedan leer  mensajes, poner botones, guardar datos y dem&#xE1;s funcionalidades &#xFA;tiles, pues ser&#xED;a muy conveniente desarrollar la aplicaci&#xF3;n como un bot capaz de aplicar la encuestas a los grupos teniendo en cuenta que estos deben tener por integrantes a los estudiantes a los que se le quiere evaluar el sentido del humor.<br>
+Si, perfecto, un bot de telegram... &#xBF;Y ahora? Pues ya conociendo esto es necesario buscar la forma de implementarlo y desplegarlo para su uso, para implementarlo hemos elegido la librer&#xED;a python-telegram-bot en la que podemos crear el bot y agregarle todas las funionalidades necesarias como crear botones &#xFA;tiles para las encuestas, ejecuci&#xF3;n de comandos, enviar mensajes, etc. Tambi&#xE9;n es necesario tener persistencia de datos para guardar los resultados de las encuestas, as&#xED; como administradores, incluso las mismas preguntas a aplicar con sus respectivas categor&#xED;as y subcategor&#xED;as, para ello es conveniente que sea flexible, adem&#xE1;s lo suficientemente r&#xE1;pido para acceder y modificar los datos en tiempo real, para ello se usa json. Luego el bot es puesto y corrido en un servidor que tenga instalado python y permita persistencia de datos, pythonanywhere nos proporciona los requisitos necesarios. Por &#xFA;ltimo es bueno pensar en que usar para hacer los an&#xE1;lisis descriptivos de los datos recogidos en las encuestas, para ello es muy c&#xF3;modo usar las librer&#xED;as de python pandas y numpy, las que tienen implementadas muchas herramientas &#xFA;tiles para este proceso.<br>
+EN este punto se ha reunido las condiciones necesarias para la implementaci&#xF3;n correcta del sistema computacional que de soluci&#xF3;n al problema en cuesti&#xF3;n. De esta forma se consibe el proyecto</p>
+<h5 class="mume-header" id="11-objetivo-general">1.1 Objetivo general:</h5>
+
+<ul>
+<li>Dise&#xF1;ar un bot de telegram capaz de hacer encuestas en los grupos y hacer un an&#xE1;lisis descriptivo sobre los resultados para medir el sentido del humor.</li>
+</ul>
+<h5 class="mume-header" id="12-objetivos-espec%C3%ADficos">1.2 Objetivos espec&#xED;ficos:</h5>
+
+<ul>
+<li>Aplicar encuestas capaces de medir el nivel de humor de los miembros de un grupo.</li>
+<li>Dise&#xF1;ar un bot capaz de aplicar encuestas en un grupo, almacenar y enviar resultados de los an&#xE1;lisis.</li>
+<li>Gestionar administradores con privilegios para usar el bot.</li>
+<li>Ejecutar un an&#xE1;lisis de los datos para devolver al usuario una descripci&#xF3;n de las respuestas en las encuestas.</li>
+<li>Tener el bot listo para ser desplegado en un servidor para que funcione en todo momento.</li>
+</ul>
+<h4 class="mume-header" id="2-an%C3%A1lisis-de-requerimientos">2. An&#xE1;lisis de requerimientos</h4>
+
+<p>EL bot est&#xE1; implementado en python, usando principalmente las librer&#xED;as python-telgram-bot, pandas y numpy, por lo tanto es necesario desplegarlo en un servidor capaz de instalar estas dependencias, que adem&#xE1;s tenga acceso a internet 100% del tiempo, peristencia de datos y un almacenamiento de al menos 100mb. Adicionalmente el usuario final necesita un dispositivo con acceso a internet capaz de soportar la aplicaci&#xF3;n Telegram en donde se le dar&#xE1; uso.</p>
+<h5 class="mume-header" id="21-soluci%C3%B3n-propuesta">2.1 Soluci&#xF3;n Propuesta</h5>
+
+<p>EL problema planteado es el de calcular el sentido del humor en un grupo de alumnos. Como ya mencionamos Willibald Ruch plantea que ante la dificultad de definir el sentido del humor es necesario conocer m&#xE1;s bien los rasgos del comportamiento involucrados en la posibilidad de vivir el humor. Desarrolla para esto el concepto de regocijo o exhilaration, emoci&#xF3;n que puede evaluarse emp&#xED;ricamente para lo que se desarrolla un instrumento que en realidad m&#xE1;s que evaluar &quot;sentido del humor&quot; eval&#xFA;a tres constructos o rasgos (alegr&#xED;a, seriedad y mal humor),  que posibilitan la emoci&#xF3;n de regocijo. La escala STCI-T-60 es entonces el instrumento que contiene estos tres constructos.<br>
+Estos constructos determinan las caracter&#xED;sticas de la emoci&#xF3;n de regocijo (exhilaration), en t&#xE9;rminos del umbral para alcanzar el estado, el nivel alcanzado y su estabilidad en el tiempo. La emoci&#xF3;n de regocijo se crea ante est&#xED;mulos tales como humor, cosquillas y gas hilarante, y se constituye en un conjunto de conductas (risas, posturas, gestos), experiencias (regocijo, percepciones entretenidas) y variables fisiol&#xF3;gicas (respiraci&#xF3;n, vocalizaci&#xF3;n, actividad card&#xED;aca y endocrina). La emoci&#xF3;n de regocijo tambi&#xE9;n esta influenciada por variables contextuales como la influencia social, drogas psicoactivas y alcohol.<br>
+Esta consta de 60 preguntas(20 por categor&#xED;a) a responder en 4 posibles opciones: Completamente de acuerdo, moderadamente de acuerdo, moderadamente en desacuerdo y completamente en desacuerdo, asignandole a cada uno de numeros enteros del 4 al 1 respectivamente, con lo que se procede a calcular. Estas categor&#xED;as tienen a su vez varias subcategor&#xED;as asignadas por preguntas.</p>
+<p>Teniendo esto en cuenta procedemos a buscar como se puede aplicar de forma simple y eficiente dado que las enciestas a menudo son complejas de aplicar sin p&#xE9;rdida de inter&#xE9;s por parte del sujeto a evaluar. conociendo que los grupos de la facultad se crean en telegram, y que la aplicaci&#xF3;n de mismo nombre permite que se puedan implementar y usar bots, pues es una muy buena v&#xED;a para aplicar los cuestionarios. Por lo tanto la soluci&#xF3;n pasa por implementar en python un bot de telegram que sea capaz de aplicar los cuestionarios, asnalizar los resultados y devolverlos, adicionalmente para su correcto funcionamiento es necesario que tenga rol de adminirstrador con los privilegios para enviar encuestas y pedir los resultados.</p>
+<p>El bot esta implementado con la librer&#xED;a python-telegram-bot, que se encarga de gestionar la comunicaci&#xF3;n con telegram y te brinda los objetos ya implementados. El proyecto queda conformado por 4 archivos:</p>
+<ul>
+<li><a href="http://main.py">main.py</a> en el que esta creado el m&#xE9;todo principal del bot, en el mismo esta implementado adicionalmente los principales comandos de inicio, ayuda, enviar encuestas(as&#xED; como los botones de elecci&#xF3;n de cantidad de preguntas a enviar), mostrar resultados de los an&#xE1;lisis y el resto tomados de otros archivos del proyecto.</li>
+<li>assing_administrator.py donde se implementa los comandos de asignar administradores, eliminar y mostrarlos, para ello es necesario apoyarse en un archivo json que va a guardar estos datos</li>
+<li>send_pull.py se encuentra la implementaci&#xF3;n de enviar las encuestas, as&#xED; como el comando de reiniciar las encuestas para que las env&#xED;e desde el principio. Aqu&#xED; se ha tenido que optimizar bien el c&#xF3;digo por un tema de que la librer&#xED;a python-telegram-bot mantiene un l&#xED;mite de tiempo por operaciones, este es f&#xE1;cilmente sobrepasado si enviamos muchas encuestas al mismo tiempo, adem&#xE1;s normalmente cada bot&#xF3;n deuna encuesta deber&#xED;a ser programado est&#xE1;ticamente, pero el para las 60 encuestas tendr&#xED;amos 240 botones com c&#xF3;digo muy similar, por lo tanto lo mejor para este caso es crear cada encuesta de forma din&#xE1;mica arriesgando que el mismo pueda ser destruido despu&#xE9;s de ejecutar el comando de enviar encuestas(el que se ejecuta para tener las opciones de enviar 1, 3, 5, 7 encuestas)</li>
+<li>data_analisis.py implementa todos los an&#xE1;lisis descriptivos sobre los resultados en las encuestas, as&#xED; como los comandos de habilitar_analisis y mostrar an&#xE1;lisis, el &#xFA;ltimo devolviendo 3 opciones: an&#xE1;lisis en el grupo, an&#xE1;lisi de una persona, descripci&#xF3;n. EL primero devuelve un excel con los resultados por categor&#xED;as para todas las personas que respondieron al menos una encuesta, el segundo devuelve  un excel con los mismos datos que el primero a&#xF1;adiendo las subcategor&#xED;as para una persona, y el tercero devuelve un emnsaje con una descripci&#xF3;n general de los resultados obtenidos en el grupo. Para ello se hace uso de las librer&#xED;as pandas y numpy que suponen una eficiente herramienta para hacer un an&#xE1;lisis descriptivo correcto de los datos haciendo uso de DataFrames y Series y sus respectivas operaciones.</li>
+</ul>
+<p>La persistencia de datos se mantiene en un archovo json llamadpo data.json, en el que se guarda las preguntas, sus categor&#xED;as y subcategor&#xED;as, se guarda los administradores, y los grupos en los que se inicia el bot con los integrantes que han respondido encuestas y sus respuestas. Este modelo fue elegido a raiz de que es conveniente su flexibilidad y simplicidad manteniendo adem&#xE1;s una buena velocidad de acceso y modificaci&#xF3;n y su facilidad para usar.</p>
+<p>El bot es necesario ejectarlo en un servidor con acceso a internet que manenga persistencia de datos y brinde una capacidad de al menos 100mb, en el que adem&#xE1;s pueda ser instalado python y librer&#xED;as del lenguaje. Esto es necesario dado que el programa debe disponer de acceso a internet para la comunicaci&#xF3;n con Telegram adem&#xE1;s necesita de capacidad para guardar los datos de los grupos en los que es usado y que persistan en el tiempo(se menciona dado que hay servidores como heroku que en su versi&#xF3;n gratuita reinicia cada cierto tiempo el despliegue perdiendo as&#xED; los datos que se hab&#xED;an guardado hasta el momento), adem&#xE1;s esta implementado con pyhton haciendo uso de pyhton-telegram-bot, pandas y numpy. Un servidor que cumple estos requisitos es pythonanywhere</p>
+<p>El proyecto contiene adem&#xE1;s otros archivos para su despliegue y uso en servidores como lo es requirements.txt que tiene las dependencias necesarias, runtime que tiene la versi&#xF3;n de python en la que funciona, y Procfile guarda el comando a ejecutar para correr el bot. Por &#xFA;ltimo seincluye una carpeta CSV que contiene el excel a enviar al usuario</p>
+<p>Tambi&#xE9;n se incluye una carpeta de Notebooks en la que se ha implementado un generador de una poblaci&#xF3;n que responde en su totalidad las encuestas y un an&#xE1;lisis de la misma hecho antes de implementarlo en el bot, en el mismo explica como se hace cada paso del mismo</p>
+<h4 class="mume-header" id="3-prueba-y-resultados-obtenidos">3. Prueba y resultados obtenidos</h4>
+
+<p>Se ha hecho una prueba real del bot, par la que el bot ha sido montado en el servidor pyhtonanywhere auxili&#xE1;ndonos de git para llevar el c&#xF3;digo al mismo justo despues de instalar pyhton-telegram-bot usando gestor de paquetes pip, luego de correrlo con el comando python <a href="http://main.py">main.py</a>, los cuestonarios son aplicados en un grupo de telegram offtopic de 3ero CC en el que se ha a&#xF1;adido sin problemas le bot e iniciado, enviado 7 preguntas por la ma&#xF1;ana y 7 por la tarde todos los d&#xED;as hasta que se  acabaron. Esta acci&#xF3;n se cumpli&#xF3; satisfactoriamente durante el per&#xED;odo del 10 al 15 de enero del 2022 con el objetivo de acumular la primera experiencia de uso real del bot creado. El grupo lo integran 60 estudiantes y es usado para hablar de cualquier tem&#xE1;tica de inter&#xE9;s, adem&#xE1;s el per&#xED;odo de aplicaci&#xF3;n de las encuestas corresponde al tramo final del semestre en el que el grupo es menos visitado de lo normal.</p>
+<p>Luego aplicar las preguntas se extraen del bot lo an&#xE1;lisis generales del grupo, el personal de dos miembros del grupo(a conveniencia los que m&#xE1;s participaron), y a continuaci&#xF3;n se expone los resultados obtenidos.</p>
+<h5 class="mume-header" id="31-an%C3%A1lisis-del-grupo">3.1 An&#xE1;lisis del grupo</h5>
+
+<p>Al comporbar los an&#xE1;lsis obtenidos para el grupo podemos observar que a penas 10 personas respondieron al menos una pregunta de la encuesta, siendo a pebas 2 o 3 los que ha respondido regularmente las preguntas.<br>
+Analizando los datos se puede observar claramente  que en general los datos de las categor&#xED;as no son ni muy elevados ni muy bajos, la alegr&#xED;a media se mantiene cercano a 3, el mal humor solo una persona supera el valor de 3, y la seriedad generalmente es alta(3 y 4) teniendo solo uno con el m&#xED;nimo y alrededor de 2.7 los que m&#xE1;s encuestas respondier&#xF3;n a excepci&#xF3;n de uno que alcanza los 3.3 de media en esta categor&#xED;a.</p>
+<h5 class="mume-header" id="32-an%C3%A1lisis-de-la-persona">3.2 An&#xE1;lisis de la persona</h5>
+
+<p>Se extrajo el personal de las dos personas que mayor n&#xFA;mero de preguntas respondieron a conveniencia.</p>
+<p>El primero a an&#xE1;lizar es el usuario hnadie, este usuario mantiene una alegr&#xED;a con una media de 2.91 de 4, malhumor en 3.08 y seriedad en 2.7, teniendo adem&#xE1;s en el resto de subcategor&#xED;as medias relativamente altas con un valor m&#xED;nimo de 2, siendo &quot;tristeza en situaciones alegres&quot; el &#xFA;nico que alcanza el m&#xE1;ximo.</p>
+<p>El segundo es el usuario Sangre_Roja, este usuario mantiene una alegr&#xED;a con una media de 2.42 de 4, malhumor en 2.92y seriedad en 2.76, teniendo adem&#xE1;s en el resto de subcategor&#xED;as medias oscilado entre 3 y 2 generalmente con solo uno por encima de 3(3.5 &quot;estilo de interacci&#xF3;n alegre&quot;)</p>
+<h5 class="mume-header" id="33-descripci%C3%B3n-de-los-datos">3.3 Descripci&#xF3;n de los datos</h5>
+
+<p>Esta opci&#xF3;n nos da por respuesta:<br>
+Medias:<br>
+Alegria: 10.27<br>
+Porcentaje Alegria: 12.84<br>
+Media Alegria: 2.42<br>
+Mal humor: 10.18<br>
+Porcentaje Mal humor: 12.73<br>
+Media Mal humor: 2.47<br>
+Seriedad: 11.45<br>
+Porcentaje Seriedad: 14.32<br>
+Media Seriedad: 2.38<br>
+Amplio rango de desencadenadores de alegria, risa y sonrisa: 2.05<br>
+Bajo umbral para la risa y sonrisa.: 0.59<br>
+Estilo de comunicacion sobrio.: 0.98<br>
+Estilo de interaccion alegre: 0.64<br>
+Irritabilidad en situaciones alegres.: 0.0<br>
+Percepcion de que los eventos de la vida diaria son serios e importantes.: 1.86<br>
+Preferir actividades concretas y racionales: 0.59<br>
+Prevalencia de animo alegre.: 0.88<br>
+Prevalencia de estados serios.: 1.98<br>
+Prevalencia de mal humor: 1.27<br>
+Prevalencia de tristeza: 1.22<br>
+Sentimientos de irritabilidad.: 1.77<br>
+Tristeza en situaciones alegres.: 0.55<br>
+Vision positiva de las circunstancias adversas de la vida.: 2.33<br>
+Vivir en torno a metas.: 0.48<br>
+Modas:<br>
+Alegria:<br>
+valor: 3.0<br>
+porcentaje: 50.0<br>
+Seriedad:<br>
+valor: 3.0<br>
+porcentaje: 66.67<br>
+Mal humor:<br>
+valor: 3.0<br>
+porcentaje: 60.0</p>
+<p>Claramente condicionado por la falta de participaci&#xF3;n en las encuestas aunque se puede ver como la moda de respuestas a las encuestas para todas las categor&#xED;as es &quot;moderadamente de acuerdo&quot;</p>
+<h4 class="mume-header" id="4-conclusiones-y-recomendaciones">4. Conclusiones y Recomendaciones</h4>
+
+<p>De esta forma queda concluido nuestra soluci&#xF3;n al problema en cuesti&#xF3;n quedando desarrollada un bot que aplica las encuestas, guarda los resultados, analiza y devuelve los resultados de forma sencilla. Pollster Z Bot est&#xE1; listo para ser usado para un efectivo an&#xE1;lisis del sentido del humor en el grupo y puede ser extendido para ampliar sus funcionalidades, se recomienda continuar trabajando en el tema donde hay una amplia gama de funcionalidades a incorporar por ejemplo: Permitir la aplicaci&#xF3;n de encuestas adicionales creadas por el usuario final con el objetivo de medir la aceptaci&#xF3;n de deterrminado tema en el grupo, leer mensajes y filtrar por temas de inter&#xE9;s en el grupo, durante el an&#xE1;lisis hacer un cl&#xFA;stering agrupando por personas con sentido del humor o temas de inter&#xE9;s parecidos, etc.</p>
+<h4 class="mume-header" id="5-bibliograf%C3%ADa-y-referencias">5. Bibliograf&#xED;a y referencias</h4>
+
+<ul>
+<li>Documentaci&#xF3;n  python-telegram-bot, pandas, pyhtonanywhere</li>
+<li>Series Investigaci&#xF3;n Cl&#xED;nica en Terapia de Pareja N&#xB0;2 OTO&#xD1;O 2009 La Evaluaci&#xF3;n del Sentido del Humor AUTORES: Dr. Luis Tapia Villanueva, Ps. Gianella Poulsen</li>
+<li>K&#xF6;hler G.,  Ruch W., (1996). Source of variance in current sense of humor inventories: How much substance, how much method variance? Humor. International Journal of Humor Research 9(3/4), 363-397.</li>
+<li>Estudio exploratorio sobre la utilizaci&#xF3;n del humor en el proceso de ense&#xF1;anza aprendizaje universitario Exploratory study on the use of humor at the university teaching&#x2010;learning process -Dr. C. Emilio Alberto Ortiz Torres <a href="mailto:eortiz@uho.edu.cu">eortiz@uho.edu.cu</a> - Universidad de Holgu&#xED;n, Cuba.</li>
+<li>SENSE OF HUMOR AND DIMENSION OF PERSONALITY - JAMES A. THORSON AND F. C.POWELL - University of Nebraska at Omaha (799-809)</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

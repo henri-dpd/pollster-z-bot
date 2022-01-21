@@ -1,0 +1,398 @@
+<!DOCTYPE html><html><head>
+      <title>Informe t&#xE9;cnico</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Laptop\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="informe-t%C3%A9cnico">Informe t&#xE9;cnico</h1>
+
+<h3 class="mume-header" id="integrantes">Integrantes:</h3>
+
+<ul>
+<li>Airelys Collazo P&#xE9;rez</li>
+<li>Alejandro Escobar Giraudy</li>
+<li>Henri Daniel Pe&#xF1;a Dequero C311</li>
+</ul>
+<h2 class="mume-header" id="pollster-z-bot"><em>Pollster Z Bot</em></h2>
+
+<h3 class="mume-header" id="universidad-de-la-habana-matcom">Universidad de La Habana, MATCOM</h3>
+
+<h4 class="mume-header" id="requerimientos-t%C3%A9cnicos">Requerimientos t&#xE9;cnicos</h4>
+
+<p>Se va a ejecutar en un servidor con acceso a internet todo el tiempo, con persistencia de datos y una capacidad de al menos 100mb como por ejemplo puede ser pythonanywhere, necesario para el despliegue del bot y los usuarios finales pueden darle uso en telegram por lo que solo necesitan un dispositivo que soporte la aplicaci&#xF3;n.</p>
+<h4 class="mume-header" id="requerimientos-de-software">Requerimientos de software</h4>
+
+<p>Es necesario tener instalado python 3.7 o superior, adem&#xE1;s de las librer&#xED;as python-telegram-bot, pandas y numpy en el servidor, para el usuario final basta tener instalado la aplicaci&#xF3;n Telegram.</p>
+<h4 class="mume-header" id="objetivo-general">Objetivo general:</h4>
+
+<ul>
+<li>Dise&#xF1;ar un bot de telegram capaz de hacer encuestas en los grupos y hacer un an&#xE1;lisis descriptivo sobre los resultados para medir el sentido del humor.</li>
+</ul>
+<h4 class="mume-header" id="objetivos-espec%C3%ADficos">Objetivos espec&#xED;ficos:</h4>
+
+<ul>
+<li>Aplicar encuestas capaces de medir el nivel de humor de los miembros de un grupo.</li>
+<li>Dise&#xF1;ar un bot capaz de aplicar encuestas en un grupo, almacenar y enviar resultados de los an&#xE1;lisis.</li>
+<li>Gestionar administradores con privilegios para usar el bot.</li>
+<li>Ejecutar un an&#xE1;lisis de los datos para devolver al usuario una descripci&#xF3;n de las respuestas en las encuestas.</li>
+<li>Tener el bot listo para ser desplegado en un servidor para que funcione en todo momento.</li>
+</ul>
+<h4 class="mume-header" id="resumen">Resumen</h4>
+
+<p>El Pollster Z Bot fue dise&#xF1;ado sobre la base de ser una aplicaci&#xF3;n que corra perpetuamente en internet, brindando los servicios de encuestas y an&#xE1;lisis de datos de las mismas a partir de los integrantes de un grupo de telegram. Para ello fue utilizado el Lenguaje Python con la biblioteca python-telegran-bot, pandas y numpy, as&#xED; como git para la gesti&#xF3;n de versiones y desarrollo de la aplicaci&#xF3;n, adem&#xE1;s desplegada en pythonanywhere.</p>
+<h4 class="mume-header" id="dise%C3%B1o-de-la-aplicaci%C3%B3n">Dise&#xF1;o de la aplicaci&#xF3;n</h4>
+
+<p>El proyecto en general est&#xE1; conformado por 4 archivos .py, donde se almacena el c&#xF3;digo, 1 archivo json, donde se guardan todos los datos acerca de las preguntas de las encuestas y de los datos que se recogen de los diferentes grupos,  una carpeta que contiene los CSV que ser&#xE1;n enviados, otra que contiene los notebooks y CSV que explican el funcionamiento del an&#xE1;lisis de datos, y por &#xFA;ltimo algunos txt utiles para la instalacion y despliegue en otras plataformas donde estar&#xE0; corriendo el c&#xF3;digo como puede ser heroku, o pythonanywhere.</p>
+<h4 class="mume-header" id="diccionario-de-datos">Diccionario de datos</h4>
+
+<p>Comencemos explicando c&#xF3;mo se guardan los datos en el json.<br>
+El archivo json tiene la estructura siguiente:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;Grupos&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;Analisis_Para_Administradores&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;Resultados&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;Preguntas&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><p>En &quot;Grupos&quot; es un diccionario cuyas llaves son los id de los grupos donde el bot haya sido iniciado, y a partir de estas llaves guarda la informaci&#xF3;n relativa al grupo.<br>
+La estructura de Grupos es:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;Integrantes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token property">&quot;Nombre del grupo&quot;</span><span class="token operator">:</span> string<span class="token punctuation">,</span> 
+    <span class="token property">&quot;Pregunta Actual&quot;</span><span class="token operator">:</span> int<span class="token punctuation">,</span>
+    <span class="token property">&quot;Administradores&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
+    <span class="token property">&quot;Usuarios&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token property">&quot;Nuevo Administrador&quot;</span><span class="token operator">:</span> string<span class="token punctuation">,</span> 
+    <span class="token property">&quot;Analisis&quot;</span> <span class="token operator">:</span> int<span class="token punctuation">,</span>
+    <span class="token property">&quot;Reiniciar Encuesta&quot;</span> <span class="token operator">:</span> int
+<span class="token punctuation">}</span>
+</pre><p>Donde &quot;Integrantes&quot; es un diccionario, cuyas llaves son los id de los usuarios que hayan respondido preguntas del bot, y de estos estudiantes guarda en un diccionario, su username de telegram (mediante la llave &quot;Usuario&quot;), y dado un n&#xFA;mero como llave, la respuesta que ha dado en las encuestas a la pregunta que coincide con ese n&#xFA;mero.<br>
+&quot;Nombre del Grupo&quot; representa el nombre del grupo de telegram correspondiente al id, &quot;Pregunta Actual&quot; es un entero que representa la pregunta que debemos enviar a continuaci&#xF3;n, Administradores es un lista que contiene los id de todos los administradores del bot en este grupo, Usuarios es un diccionario que, dado un username, devuelve el id de ese usuario, &quot;Nuevo Administrador&quot; es un string que ayuda al bot a agregar un nuevo administrador a ese grupo usando el id, &quot;Analisis&quot; y &quot;Reiniciar Encuesta&quot; son contadores que sirven para algunas de las funcionalidades del Bot.<br>
+Regresando a la estructura principal del Json, tenemos &quot;Analisis_Para_Administradores&quot;, que dado un id de un administrador de un grupo en el que el bot est&#xE9; activo, devuelve el id que identifica el grupo al que &#xE9;l puede acceder a sus datos a partir de los CSV.<br>
+&quot;Resultados&quot;, que es un diccionario que tiene por llaves los id de los grupos y valor otro diccionario que contiene los resultados del ultimo analisi ejecutado, hay 3 resultados: &quot;descripcion&quot; que tiene nombre, sumatoria por categor&#xED;a, porcentaje por categor&#xED;a, media por categor&#xED;a para cada persona que respondio al menos una encuesta; &quot;resultado&quot; que tiene de forma general para todo el grupo en que promedio de sumatoria, porcentaje, media por categoria y sumatoria por subcategor&#xED;a; moda contiene por categor&#xED;a el valor que m&#xE1;s se repite y en que porcentaje. Tenga en consideraci&#xF3;n que las respuestas de las encuestas se traducen a valores enteros entre 1 y 4.<br>
+Y por &#xFA;ltimo &quot;Preguntas&quot;, que es una lista de diccionarios que representan cada una de las preguntas, todos estos tienen por llaves &quot;Pregunta&quot;, que es el enunciado de la pregunta, &quot;NumeroPregunta&quot;, que es el &#xED;ndice de la pregunta, &quot;IndiceSubcategoria&quot;, que representa el &#xED;ndice subcategor&#xED;a a la que pertenece la pregunta, &quot;Subcategoria&quot;, la subcategor&#xED;a a la que pertenece la pregunta, y &quot;Categoria&quot;, que es la categor&#xED;a a la que pertenece la pregunta, para cada categor&#xED;a se tiene varias subcategor&#xED;as y por cada subcategor&#xED;a se tiene varias preguntas, pero en general con 20 preguntas pro categor&#xED;a.</p>
+<h4 class="mume-header" id="esquema-de-las-clases-definidas">Esquema de las clases definidas</h4>
+
+<p>Una vez explicado la estructura del Json, comenzamos por cada uno de los .py.<br>
+<a href="http://Main.py">Main.py</a> contiene la estructura del bot en s&#xED;, los botones, comandos y etc. Es el archivo principal que debe ser cargado para que funcione el lenguaje.<br>
+En este se encuentra (al final) el dispatcher que nos permite agregar los comandos y botones, y a continuaci&#xF3;n el cuerpo de los mismos, que se agregan mediante add_handler (que pertenece a python-telegram-bot), siendo esta lista siguiente los comandos:</p>
+<ul>
+<li>iniciar_bot</li>
+<li>start</li>
+<li>reiniciar_preguntas</li>
+<li>mostrar_analisis</li>
+<li>habilitar_analisis</li>
+<li>agregar_administrador</li>
+<li>eliminar_administrador</li>
+<li>mostrar_administradores</li>
+<li>ayuda</li>
+</ul>
+<p>Los botones tienen otras caracter&#xED;sticas y son demasiados puesto que, adem&#xE1;s de los principales, existen 240 solo para las encuestas.<br>
+Ahora explicaremos las funciones que podemos encontrar en todos los .py.<br>
+Estas contienen dos caracter&#xED;sticas similares, siempre que responda a un comando o bot&#xF3;n la entrada ser&#xE1;n dos par&#xE1;metros update y context, que contienen toda la informaci&#xF3;n que nos proporciona telegram acerca de los usuarios que interact&#xFA;an con el bot y el grupo en el que se encuentra (en caso de que se est&#xE9; interactuando con el bot en un grupo claro est&#xE1;), y que se hace al inicio de cada m&#xE9;todo una serie de revisiones.<br>
+Estas revisiones suelen ser del tipo, si el usuario est&#xE1; interactuando con el bot por el privado o a partir de un grupo, si el grupo ya ha sido iniciado (o lo que es lo mismo, si el id del bot se encuentra en la secci&#xF3;n &quot;Grupos&quot; del json), si dado el username del usuario ya fue recogido su id, y si la persona que interact&#xFA;a con el bot es un administrador del mismo en ese grupo.<br>
+Aunque hay variaciones en algunos m&#xE9;todos, siempre se tiende a tener la estructura de preguntas anteriormente descrita, as&#xED; que ser&#xE1; com&#xFA;n encontrarse ese c&#xF3;digo al inicio de cada funci&#xF3;n siempre, extrayendo y guardando en variables algunos datos de inter&#xE9;s como el id del usuario y el id del grupo.<br>
+En <a href="http://main.py">main.py</a> tenemos las funciones:</p>
+<ul>
+<li>start, que despliega los botones que se utilizan para lanzar preguntas al grupo, apoy&#xE1;ndose en el m&#xE9;todo Show_Pull_Buttons</li>
+<li>Show_Analisis_Buttons, que muestra los botones utilizados para devolver los CSV con el an&#xE1;lisis de datos</li>
+<li>SendHelp, que muestra la lista de comandos del Pollster Bot</li>
+</ul>
+<p>Una vez analizado main procedamos al resto de .py<br>
+Assign_administrator.py es el encargado de las funciones que tengan que ver con la decisi&#xF3;n sobre qui&#xE9;n es administrador de cierto grupo. Si bien todos los presentes en el grupo pueden participar en las encuestas, solo los que sean designados como admistradores del grupo pueden utilizar los comandos del mismo, as&#xED; como los botones que no tenga que ver con las encuestas.<br>
+Aqu&#xED; podemos encontrar los m&#xE9;todos:</p>
+<ul>
+<li>inicialization, que responde a un comando que solo se puede utilizar una vez, y es el primero que debemos utilizar al agregar el bot a un grupo. Este comando agrega el grupo con su informaci&#xF3;n pertinente al json, y designa a la persona que lo use como administrador del bot en el grupo inmediatamente. Ning&#xFA;n otro comando funciona hasta que no hayamos activado este.</li>
+<li>add_administrator y enter_administrator, son dos funciones que permiten agregar un administrador del bot en un grupo, por la din&#xE1;mica de los comandos, al seleccionar el comando correspondiente, se habilita el bot para guardar informaci&#xF3;n de qui&#xE9;n se quiere agregar, add_administrator informa al json de este estado y enter_administrador agrega a la persona a partir de que el bot lea lo que escribe.</li>
+<li>Remove_Administrator y Erase_Administrator, que elimina un administrador del bot en un grupo siguiendo la l&#xF3;gica anterior.</li>
+<li>Show_Administrators, que b&#xE1;sicamente manda un mensaje con una lista de los usernames de los administradores en el grupo actual.</li>
+</ul>
+<p>Send_pull.py es el que contiene las funciones relacionadas con las encuestas.<br>
+En este podemos encontrar:</p>
+<ul>
+<li>Restart_Pull, que permite reiniciar las preguntas para que comience a mandarse desde la primera de nuevo<br>
+-Pulls_Buttons, es una funci&#xF3;n que responde a los 240 botones de las distintas opciones de las 60 preguntas, recibe en el update cu&#xE1;l es el bot&#xF3;n que fue tocado y a qu&#xE9; pregunta pertenece, para guardar dicha informaci&#xF3;n en el json.</li>
+<li>Add_Pull_Callback_Query_Handler, a&#xF1;ade de forma din&#xE1;mica el c&#xF3;digo de los 240 botones de las preguntas, para luego ser cargado por el dispatcher del main</li>
+<li>Send_Pull, que permite lanzar n preguntas con sus 4 opciones respectivas, esta viene a continuaci&#xF3;n de Send_Pull_1, 3, 5 y 7, que le informan del n&#xFA;mero de preguntas correspondientes a lanzar.</li>
+</ul>
+<p>Por &#xFA;ltimo tenemos data_analisis.py en donde estan los m&#xE9;todos que calculan el an&#xE1;lisis:<br>
+Consta de los m&#xE9;todos:</p>
+<ul>
+<li>enable_analisis se ejecuta al lanzar el comando habilitar_analisis permitiendo al usuario acceder al an&#xE1;lisis por el chat privado del bot en donde se env&#xED;a un mensaje de feedback para que sepa que fue ejecutado con &#xE9;xito</li>
+<li>analisis m&#xE9;todo que se ejecuta al lanzar el comando mostrar_analisis, en el mismo se toma los datos del grupo en que se habilt&#xF3; el an&#xE1;lisis y se procesan para guardar en el json &quot;Resultados&quot; los resultados. Para realizar el an&#xE1;lisis se crean dos dataframes(utilizando pandas), df que contiene de columnas Nombre y las preguntas teniendo por fila las respuestas de cada usuario y sub que tiene por columnas Pregunta, NumeroPregunta, IndiceSubcategoria, Subcategoria, Categoria siendo as&#xED; cada fila una pregunta de esta manera conocemos por cada pregunta cu&#xE1;l es su categor&#xED;a y subcategor&#xED;a, teniendo esto se procede al an&#xE1;lisis descriptivo de los datos, se crea un dataframe preproc auxiliar en el que guardaremos los resultados, luego se agrupa preguntas por categor&#xED;a guardando el resultado en categoria, iterando por las categorias procedemos a extraer la sumatoria, porcetaje y media filtrando en la categor&#xED;a por persona y guardando dichas series(columnas en los dataframes) en preproc, usando la misma l&#xF3;gica calculamos la agrupamos y calculamos la sumatoria por subcategor&#xED;a guardando el resultado tambi&#xE9;n en categor&#xED;a, luego se guarda en una variable llamada resultado la sumatoria de las categor&#xED;as de todas las personas guardada en preproc, a continuaci&#xF3;n crea el diccionario de modas por categor&#xED;a asignando como valor por defecto &quot;-&quot; y antes de llenarlo se verifica si existen preguntas respondidas en la categor&#xED;a, una vez terminado y tenemos todos los datos descriptivos por lo tanto preproc, resultado, moda se guardan en data.json en data[&quot;Resultados&quot;][group_id] teniendo como llaves &quot;descripcion&quot;, &quot;resultado&quot;, &quot;moda&quot; respectivamente.</li>
+<li>Show_Data_Analisis_All_Member lee de data.json en data[&quot;Resultados&quot;][group_id][&quot;descripcion&quot;] y se toma las columnas desde &quot;Nombre&quot; hasta &quot;Media Seriedad&quot; y se guarda en &quot;CSV/Resultados en el grupo.csv&quot; para posteriormente enviarlo el mismo al usuario</li>
+<li>Show_Data_Analisis_One_Member envia al usuario un mensaje para indicarle como debe pedir el nombre de la persona de quien va a obtener los datos</li>
+<li>Show_Data_Analisis_One_Member_Enter lee el nombre que le env&#xED;an al bot y lee de data.json en data[&quot;Resultados&quot;][group_id][&quot;descripcion&quot;] devolviendo la fila que tiene por nombre el que el usuario necesita, se guarda en &quot;CSV/Resultados en la persona.csv&quot; y env&#xED;a al usuario.</li>
+<li>Data_Description lee de data.json en data[&quot;Resultados&quot;][group_id][&quot;resultado&quot;] y data[&quot;Resultados&quot;][group_id][&quot;moda&quot;] para luego guardar los datos en un string para luego enviarlo como un mensaje al usuario</li>
+</ul>
+<p>De esta forma queda conformado el proyecto, concluimos el actual informe. Gracias por leer.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
